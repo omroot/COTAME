@@ -40,3 +40,6 @@ Modeling notebooks with results can be found in:
 - rbob: `notebooks\cot_modeling\rbob\`
 - br: `notebooks\cot_modeling\br\`
 - wti: `notebooks\cot_modeling\wti\`
+
+
+Across all feature and model selection, we use as performance metric the correlation between predicted and actual positioning. 
