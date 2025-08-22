@@ -25,11 +25,11 @@ def build_estimator_from_trial(trial: optuna.Trial):
     )
 
     if model_name == "enet":
-        alpha = trial.suggest_float("enet_alpha", 1e-6, 1e-1, log=True)
-        l1_ratio = trial.suggest_float("enet_l1_ratio", 0.0, 1.0)
-        loss = trial.suggest_categorical("enet_loss", ["squared_error", "huber"])
+        alpha = trial.suggest_float("alpha", 1e-6, 1e-1, log=True)
+        l1_ratio = trial.suggest_float("l1_ratio", 0.0, 1.0)
+        loss = trial.suggest_categorical("loss", ["squared_error", "huber"])
         # (Optional) huber epsilon if chosen
-        epsilon = trial.suggest_float("enet_epsilon", 1e-3, 0.2) if loss == "huber" else 0.1
+        epsilon = trial.suggest_float("epsilon", 1e-3, 0.2) if loss == "huber" else 0.1
         base = SGDRegressor(
             penalty="elasticnet",
             alpha=alpha,
@@ -44,12 +44,12 @@ def build_estimator_from_trial(trial: optuna.Trial):
         est = Pipeline([("scaler", StandardScaler()), ("model", base)])
 
     elif model_name == "lasso":
-        alpha = trial.suggest_float("lasso_alpha", 1e-6, 1e1, log=True)
+        alpha = trial.suggest_float("alpha", 1e-6, 1e1, log=True)
         base = Lasso(alpha=alpha, random_state=RANDOM_STATE)
         est = Pipeline([("scaler", StandardScaler()), ("model", base)])
 
     elif model_name == "ridge":
-        alpha = trial.suggest_float("ridge_alpha", 1e-6, 1e3, log=True)
+        alpha = trial.suggest_float("alpha", 1e-6, 1e3, log=True)
         base = Ridge(alpha=alpha, random_state=RANDOM_STATE)
         est = Pipeline([("scaler", StandardScaler()), ("model", base)])
 
@@ -58,10 +58,10 @@ def build_estimator_from_trial(trial: optuna.Trial):
         est = Pipeline([("scaler", StandardScaler()), ("model", base)])
 
     elif model_name == "rf":
-        n_estimators = trial.suggest_int("rf_n_estimators", 200, 1200, step=200)
-        max_depth = trial.suggest_int("rf_max_depth", 3, 30)
-        min_samples_leaf = trial.suggest_int("rf_min_samples_leaf", 1, 10)
-        max_features = trial.suggest_categorical("rf_max_features", ["sqrt", "log2", None])
+        n_estimators = trial.suggest_int("n_estimators", 200, 1200, step=200)
+        max_depth = trial.suggest_int("max_depth", 3, 30)
+        min_samples_leaf = trial.suggest_int("min_samples_leaf", 1, 10)
+        max_features = trial.suggest_categorical("max_features", ["sqrt", "log2"])
         est = RandomForestRegressor(
             n_estimators=n_estimators,
             max_depth=max_depth,
@@ -72,10 +72,10 @@ def build_estimator_from_trial(trial: optuna.Trial):
         )
 
     elif model_name == "extra":
-        n_estimators = trial.suggest_int("extra_n_estimators", 200, 1200, step=200)
-        max_depth = trial.suggest_int("extra_max_depth", 3, 30)
-        min_samples_leaf = trial.suggest_int("extra_min_samples_leaf", 1, 10)
-        max_features = trial.suggest_categorical("extra_max_features", ["sqrt", "log2", None])
+        n_estimators = trial.suggest_int("n_estimators", 200, 1200, step=200)
+        max_depth = trial.suggest_int("max_depth", 3, 30)
+        min_samples_leaf = trial.suggest_int("min_samples_leaf", 1, 10)
+        max_features = trial.suggest_categorical("max_features", ["sqrt", "log2"])
         est = ExtraTreesRegressor(
             n_estimators=n_estimators,
             max_depth=max_depth,
@@ -86,11 +86,11 @@ def build_estimator_from_trial(trial: optuna.Trial):
         )
 
     else:  # "hgbm"
-        learning_rate = trial.suggest_float("hgbm_learning_rate", 1e-3, 0.3, log=True)
-        max_depth = trial.suggest_int("hgbm_max_depth", 3, 16)
-        max_iter = trial.suggest_int("hgbm_max_iter", 100, 1000, step=100)
-        l2 = trial.suggest_float("hgbm_l2_regularization", 0.0, 1.0)
-        max_leaf_nodes = trial.suggest_int("hgbm_max_leaf_nodes", 15, 255)
+        learning_rate = trial.suggest_float("learning_rate", 1e-3, 0.3, log=True)
+        max_depth = trial.suggest_int("max_depth", 3, 16)
+        max_iter = trial.suggest_int("max_iter", 100, 1000, step=100)
+        l2 = trial.suggest_float("l2_regularization", 0.0, 1.0)
+        max_leaf_nodes = trial.suggest_int("max_leaf_nodes", 15, 255)
         est = HistGradientBoostingRegressor(
             learning_rate=learning_rate,
             max_depth=max_depth,
@@ -146,6 +146,8 @@ def find_best_model(Xy: pd.DataFrame,
       - study (Optuna Study)
       - best_per_model (dict mapping model -> {params, score})
     """
+    Xy = Xy[['tradeDate']+feature_names+[response_name]].dropna()
+    Xy.reset_index(drop=True, inplace= True)
     study = optuna.create_study(
         direction="maximize",
         sampler=optuna.samplers.TPESampler(seed=seed),
