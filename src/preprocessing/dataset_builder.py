@@ -71,4 +71,14 @@ class DataSetBuilder:
             dataset[f'{feature_name}_change'] = dataset[feature_name]- dataset[feature_name].shift(1)
             dataset[f'prior_report_{feature_name}_change'] = dataset[f'{feature_name}_change'].shift(1)
             dataset[f'forward_{feature_name}_change'] =  dataset[feature_name].shift(-1) - dataset[feature_name]
+        
+
+        for name in [ 'prior_cumulative_5D_F1_Volume',
+                    'prior_cumulative_5D_F2_Volume',
+                    'prior_cumulative_5D_F1MinusF2_Volume' ,
+                    'F1_RolledPrice',
+                    'F2_RolledPrice',
+                    'F3_RolledPrice']:
+            dataset[f'{name}_change'] = dataset[name] - dataset[name].shift(1)
+            dataset[f'next_{name}_change'] =  dataset[name].shift(-1) - dataset[name] 
         self.data = dataset
