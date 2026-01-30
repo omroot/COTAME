@@ -241,7 +241,6 @@ def register_callbacks(app, app_data):
             title=title,
             xaxis_title=feature,
             yaxis_title=response,
-            yaxis=dict(scaleanchor="x", scaleratio=1),
             margin=dict(l=80),
             showlegend=True,
             legend=dict(x=0.01, y=0.99),
