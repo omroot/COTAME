@@ -1,0 +1,106 @@
+{
+  "ticker": "wti",
+  "investor_type": "mm",
+  "features": [
+    {
+      "name": "prior_report_ManagedMoney_NetPosition_change",
+      "description": "Week-over-week change in MM net position from prior COT report",
+      "category": "cot_position"
+    },
+    {
+      "name": "prior_report_ManagedMoney_LongPosition_change",
+      "description": "Week-over-week change in MM long position from prior COT report",
+      "category": "cot_position"
+    },
+    {
+      "name": "prior_report_ManagedMoney_ShortPosition_change",
+      "description": "Week-over-week change in MM short position from prior COT report",
+      "category": "cot_position"
+    },
+    {
+      "name": "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
+      "description": "Week-over-week change in MM net position as pct of open interest",
+      "category": "cot_position_to_oi"
+    },
+    {
+      "name": "prior_report_ManagedMoney_LongPosition_to_openinterest_change",
+      "description": "Week-over-week change in MM long position as pct of open interest",
+      "category": "cot_position_to_oi"
+    },
+    {
+      "name": "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+      "description": "Week-over-week change in MM short position as pct of open interest",
+      "category": "cot_position_to_oi"
+    },
+    {
+      "name": "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+      "description": "Week-over-week change in F1-F2 calendar spread price",
+      "category": "spread"
+    },
+    {
+      "name": "prior_cumulative_5D_F1_Volume_change",
+      "description": "Change in cumulative 5-day front-month volume vs prior week",
+      "category": "volume"
+    },
+    {
+      "name": "prior_cumulative_5D_F2_Volume_change",
+      "description": "Change in cumulative 5-day second-month volume vs prior week",
+      "category": "volume"
+    },
+    {
+      "name": "prior_cumulative_5D_F1MinusF2_Volume_change",
+      "description": "Change in cumulative 5-day F1-F2 volume spread vs prior week",
+      "category": "volume"
+    },
+    {
+      "name": "prior_5D_F1_OI_change",
+      "description": "5-day change in front-month open interest",
+      "category": "open_interest"
+    },
+    {
+      "name": "prior_5D_F2_OI_change",
+      "description": "5-day change in second-month open interest",
+      "category": "open_interest"
+    },
+    {
+      "name": "prior_5D_AGG_OI_change",
+      "description": "5-day change in aggregate open interest",
+      "category": "open_interest"
+    },
+    {
+      "name": "prior_5D_F1MinusF2_openinterest_change",
+      "description": "5-day change in F1-F2 open interest spread",
+      "category": "open_interest"
+    },
+    {
+      "name": "F1_RolledPrice_rolling_20D_volatility",
+      "description": "20-day rolling volatility of front-month rolled price",
+      "category": "volatility"
+    },
+    {
+      "name": "F2_RolledPrice_rolling_20D_volatility",
+      "description": "20-day rolling volatility of second-month rolled price",
+      "category": "volatility"
+    },
+    {
+      "name": "F3_RolledPrice_rolling_20D_volatility",
+      "description": "20-day rolling volatility of third-month rolled price",
+      "category": "volatility"
+    },
+    {
+      "name": "F1_RolledPrice_change",
+      "description": "Week-over-week change in front-month rolled price",
+      "category": "price"
+    },
+    {
+      "name": "F2_RolledPrice_change",
+      "description": "Week-over-week change in second-month rolled price",
+      "category": "price"
+    },
+    {
+      "name": "F3_RolledPrice_change",
+      "description": "Week-over-week change in third-month rolled price",
+      "category": "price"
+    }
+  ]
+}

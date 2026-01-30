@@ -125,7 +125,7 @@ class MarcenkoPastur:
         kernel_density_estimator.fit(observations=eigenvalues)
         q_grid = np.linspace(self.min_q, self.max_q, self.q_grid_size)
         out = {}
-        min_fun = float(np.Infinity)
+        min_fun = float(np.inf)
         best_q = None
         for q in q_grid:
             self.q =q

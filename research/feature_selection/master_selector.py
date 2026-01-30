@@ -10,6 +10,7 @@ from sklearn.cluster import KMeans
 from sklearn.feature_selection import SequentialFeatureSelector
 
 from research.feature_selection.mda import MDA
+from research.feature_selection.mrmr import MRMR
 from research.covariance.CleanseMatrix import CleanseMatrix
 
 class MasterSelector():
@@ -22,6 +23,8 @@ class MasterSelector():
                  response_name: str = None,
                  feature_similarity_method: str = 'pearson',
                  is_classification: bool = True,
+                 redundancy_method: str = 'mrmr',
+                 correlation_threshold: float = 0.5,
                  verbose: bool = False
                  ):
 
@@ -32,6 +35,8 @@ class MasterSelector():
         self.response_name = response_name
         self.feature_similarity_method = feature_similarity_method
         self.is_classification = is_classification
+        self.redundancy_method = redundancy_method
+        self.correlation_threshold = correlation_threshold
         self.verbose = verbose
         self.number_of_feature_clusters: int = None
         self.feature_clusters: dict = None
@@ -111,11 +116,20 @@ class MasterSelector():
         for cluster_name in self.selected_feature_cluster_names:
             cluster_features = self.feature_clusters[cluster_name]
             if len(cluster_features) > 1:
-                sfs = SequentialFeatureSelector(estimator= self.redudancy_model,
-                                                cv=self.cv,
-                                                direction='backward')
-                sfs.fit(X=dataset[cluster_features], y=dataset[self.response_name])
-                purged_feature_clusters[cluster_name] = list(np.array(cluster_features)[sfs.get_support()])
+                if self.redundancy_method == 'mrmr':
+                    mrmr = MRMR(model=self.redudancy_model,
+                                cv=self.cv,
+                                correlation_threshold=self.correlation_threshold,
+                                similarity_method=self.feature_similarity_method,
+                                is_classification=self.is_classification)
+                    mrmr.fit(X=dataset[cluster_features], y=dataset[self.response_name])
+                    purged_feature_clusters[cluster_name] = mrmr.selected_features
+                elif self.redundancy_method == 'sfs':
+                    sfs = SequentialFeatureSelector(estimator=self.redudancy_model,
+                                                    cv=self.cv,
+                                                    direction='backward')
+                    sfs.fit(X=dataset[cluster_features], y=dataset[self.response_name])
+                    purged_feature_clusters[cluster_name] = list(np.array(cluster_features)[sfs.get_support()])
             else:
                 purged_feature_clusters[cluster_name] = cluster_features
         self.purged_feature_clusters =purged_feature_clusters

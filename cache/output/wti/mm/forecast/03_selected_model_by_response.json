@@ -1,0 +1,52 @@
+{
+  "forward_report_ManagedMoney_NetPosition_change": {
+    "model_name": "rf",
+    "params": {
+      "n_estimators": 600,
+      "max_depth": 15,
+      "min_samples_leaf": 8,
+      "max_features": "log2"
+    }
+  },
+  "forward_report_ManagedMoney_LongPosition_change": {
+    "model_name": "hgbm",
+    "params": {
+      "learning_rate": 0.2904065692376172,
+      "max_depth": 7,
+      "max_iter": 400,
+      "l2_regularization": 0.18297228851357758,
+      "max_leaf_nodes": 57
+    }
+  },
+  "forward_report_ManagedMoney_ShortPosition_change": {
+    "model_name": "extra",
+    "params": {
+      "n_estimators": 800,
+      "max_depth": 9,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    }
+  },
+  "forward_ManagedMoney_NetPosition_to_openinterest_change": {
+    "model_name": "extra",
+    "params": {
+      "n_estimators": 200,
+      "max_depth": 3,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt"
+    }
+  },
+  "forward_ManagedMoney_LongPosition_to_openinterest_change": {
+    "model_name": "ols",
+    "params": {}
+  },
+  "forward_ManagedMoney_ShortPosition_to_openinterest_change": {
+    "model_name": "extra",
+    "params": {
+      "n_estimators": 1000,
+      "max_depth": 20,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    }
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "ticker": "wti",
+  "investor_type": "mm",
+  "horizon": "forecast",
+  "all_feature_names": [
+    "prior_report_ManagedMoney_NetPosition_change",
+    "prior_report_ManagedMoney_LongPosition_change",
+    "prior_report_ManagedMoney_ShortPosition_change",
+    "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
+    "prior_report_ManagedMoney_LongPosition_to_openinterest_change",
+    "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+    "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+    "prior_cumulative_5D_F1_Volume_change",
+    "prior_cumulative_5D_F2_Volume_change",
+    "prior_cumulative_5D_F1MinusF2_Volume_change",
+    "prior_5D_F1_OI_change",
+    "prior_5D_F2_OI_change",
+    "prior_5D_AGG_OI_change",
+    "prior_5D_F1MinusF2_openinterest_change",
+    "F1_RolledPrice_rolling_20D_volatility",
+    "F2_RolledPrice_rolling_20D_volatility",
+    "F3_RolledPrice_rolling_20D_volatility",
+    "F1_RolledPrice_change",
+    "F2_RolledPrice_change",
+    "F3_RolledPrice_change"
+  ],
+  "responses": {
+    "forward_report_ManagedMoney_NetPosition_change": {
+      "number_of_feature_clusters": 6,
+      "feature_clusters": {
+        "C_0": [
+          "prior_report_ManagedMoney_ShortPosition_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change"
+        ],
+        "C_1": [
+          "prior_report_ManagedMoney_NetPosition_change",
+          "prior_report_ManagedMoney_LongPosition_change",
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
+        ],
+        "C_2": [
+          "F1_RolledPrice_change",
+          "F2_RolledPrice_change",
+          "F3_RolledPrice_change"
+        ],
+        "C_3": [
+          "F1_RolledPrice_rolling_20D_volatility",
+          "F2_RolledPrice_rolling_20D_volatility",
+          "F3_RolledPrice_rolling_20D_volatility"
+        ],
+        "C_4": [
+          "prior_cumulative_5D_F1_Volume_change",
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_AGG_OI_change"
+        ],
+        "C_5": [
+          "prior_5D_F1_OI_change",
+          "prior_5D_F1MinusF2_openinterest_change"
+        ]
+      },
+      "selected_cluster_names": [
+        "C_2",
+        "C_1",
+        "C_0"
+      ],
+      "purged_feature_clusters": {
+        "C_2": [
+          "F2_RolledPrice_change"
+        ],
+        "C_1": [
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change"
+        ],
+        "C_0": [
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change"
+        ]
+      },
+      "selected_features": [
+        "F2_RolledPrice_change",
+        "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
+        "prior_cumulative_5D_F2_Volume_change",
+        "prior_5D_F2_OI_change",
+        "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+        "prior_report_SyntheticF1MinusF2_RolledPrice_change"
+      ]
+    },
+    "forward_report_ManagedMoney_LongPosition_change": {
+      "number_of_feature_clusters": 6,
+      "feature_clusters": {
+        "C_0": [
+          "F1_RolledPrice_rolling_20D_volatility",
+          "F2_RolledPrice_rolling_20D_volatility",
+          "F3_RolledPrice_rolling_20D_volatility"
+        ],
+        "C_1": [
+          "prior_report_ManagedMoney_NetPosition_change",
+          "prior_report_ManagedMoney_LongPosition_change",
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
+        ],
+        "C_2": [
+          "F1_RolledPrice_change",
+          "F2_RolledPrice_change",
+          "F3_RolledPrice_change"
+        ],
+        "C_3": [
+          "prior_5D_F1_OI_change",
+          "prior_5D_F1MinusF2_openinterest_change"
+        ],
+        "C_4": [
+          "prior_report_ManagedMoney_ShortPosition_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change"
+        ],
+        "C_5": [
+          "prior_cumulative_5D_F1_Volume_change",
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_AGG_OI_change"
+        ]
+      },
+      "selected_cluster_names": [
+        "C_2",
+        "C_3",
+        "C_4"
+      ],
+      "purged_feature_clusters": {
+        "C_2": [
+          "F2_RolledPrice_change"
+        ],
+        "C_3": [
+          "prior_5D_F1_OI_change"
+        ],
+        "C_4": [
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change"
+        ]
+      },
+      "selected_features": [
+        "F2_RolledPrice_change",
+        "prior_5D_F1_OI_change",
+        "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+        "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+        "prior_cumulative_5D_F2_Volume_change",
+        "prior_5D_F2_OI_change"
+      ]
+    },
+    "forward_report_ManagedMoney_ShortPosition_change": {
+      "number_of_feature_clusters": 6,
+      "feature_clusters": {
+        "C_0": [
+          "prior_report_ManagedMoney_NetPosition_change",
+          "prior_report_ManagedMoney_LongPosition_change",
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
+        ],
+        "C_1": [
+          "F1_RolledPrice_rolling_20D_volatility",
+          "F2_RolledPrice_rolling_20D_volatility",
+          "F3_RolledPrice_rolling_20D_volatility"
+        ],
+        "C_2": [
+          "F1_RolledPrice_change",
+          "F2_RolledPrice_change",
+          "F3_RolledPrice_change"
+        ],
+        "C_3": [
+          "prior_cumulative_5D_F1_Volume_change",
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_AGG_OI_change"
+        ],
+        "C_4": [
+          "prior_report_ManagedMoney_ShortPosition_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change"
+        ],
+        "C_5": [
+          "prior_5D_F1_OI_change",
+          "prior_5D_F1MinusF2_openinterest_change"
+        ]
+      },
+      "selected_cluster_names": [
+        "C_1",
+        "C_2"
+      ],
+      "purged_feature_clusters": {
+        "C_1": [
+          "F2_RolledPrice_rolling_20D_volatility"
+        ],
+        "C_2": [
+          "F2_RolledPrice_change"
+        ]
+      },
+      "selected_features": [
+        "F2_RolledPrice_rolling_20D_volatility",
+        "F2_RolledPrice_change"
+      ]
+    },
+    "forward_ManagedMoney_NetPosition_to_openinterest_change": {
+      "number_of_feature_clusters": 6,
+      "feature_clusters": {
+        "C_0": [
+          "prior_cumulative_5D_F1_Volume_change",
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_AGG_OI_change"
+        ],
+        "C_1": [
+          "F1_RolledPrice_rolling_20D_volatility",
+          "F2_RolledPrice_rolling_20D_volatility",
+          "F3_RolledPrice_rolling_20D_volatility"
+        ],
+        "C_2": [
+          "F1_RolledPrice_change",
+          "F2_RolledPrice_change",
+          "F3_RolledPrice_change"
+        ],
+        "C_3": [
+          "prior_report_ManagedMoney_ShortPosition_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change"
+        ],
+        "C_4": [
+          "prior_report_ManagedMoney_NetPosition_change",
+          "prior_report_ManagedMoney_LongPosition_change",
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
+        ],
+        "C_5": [
+          "prior_5D_F1_OI_change",
+          "prior_5D_F1MinusF2_openinterest_change"
+        ]
+      },
+      "selected_cluster_names": [
+        "C_5",
+        "C_1",
+        "C_3"
+      ],
+      "purged_feature_clusters": {
+        "C_5": [
+          "prior_5D_F1MinusF2_openinterest_change"
+        ],
+        "C_1": [
+          "F2_RolledPrice_rolling_20D_volatility"
+        ],
+        "C_3": [
+          "prior_5D_F2_OI_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change"
+        ]
+      },
+      "selected_features": [
+        "prior_5D_F1MinusF2_openinterest_change",
+        "F2_RolledPrice_rolling_20D_volatility",
+        "prior_5D_F2_OI_change",
+        "prior_cumulative_5D_F2_Volume_change",
+        "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+        "prior_report_SyntheticF1MinusF2_RolledPrice_change"
+      ]
+    },
+    "forward_ManagedMoney_LongPosition_to_openinterest_change": {
+      "number_of_feature_clusters": 6,
+      "feature_clusters": {
+        "C_0": [
+          "prior_cumulative_5D_F1_Volume_change",
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_AGG_OI_change"
+        ],
+        "C_1": [
+          "prior_report_ManagedMoney_NetPosition_change",
+          "prior_report_ManagedMoney_LongPosition_change",
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
+        ],
+        "C_2": [
+          "F1_RolledPrice_change",
+          "F2_RolledPrice_change",
+          "F3_RolledPrice_change"
+        ],
+        "C_3": [
+          "prior_report_ManagedMoney_ShortPosition_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change"
+        ],
+        "C_4": [
+          "F1_RolledPrice_rolling_20D_volatility",
+          "F2_RolledPrice_rolling_20D_volatility",
+          "F3_RolledPrice_rolling_20D_volatility"
+        ],
+        "C_5": [
+          "prior_5D_F1_OI_change",
+          "prior_5D_F1MinusF2_openinterest_change"
+        ]
+      },
+      "selected_cluster_names": [
+        "C_2",
+        "C_0",
+        "C_3"
+      ],
+      "purged_feature_clusters": {
+        "C_2": [
+          "F2_RolledPrice_change"
+        ],
+        "C_0": [
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_AGG_OI_change"
+        ],
+        "C_3": [
+          "prior_5D_F2_OI_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change"
+        ]
+      },
+      "selected_features": [
+        "F2_RolledPrice_change",
+        "prior_cumulative_5D_F1MinusF2_Volume_change",
+        "prior_5D_AGG_OI_change",
+        "prior_5D_F2_OI_change",
+        "prior_cumulative_5D_F2_Volume_change",
+        "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+        "prior_report_SyntheticF1MinusF2_RolledPrice_change"
+      ]
+    },
+    "forward_ManagedMoney_ShortPosition_to_openinterest_change": {
+      "number_of_feature_clusters": 6,
+      "feature_clusters": {
+        "C_0": [
+          "F1_RolledPrice_rolling_20D_volatility",
+          "F2_RolledPrice_rolling_20D_volatility",
+          "F3_RolledPrice_rolling_20D_volatility"
+        ],
+        "C_1": [
+          "F1_RolledPrice_change",
+          "F2_RolledPrice_change",
+          "F3_RolledPrice_change"
+        ],
+        "C_2": [
+          "prior_cumulative_5D_F1_Volume_change",
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_AGG_OI_change"
+        ],
+        "C_3": [
+          "prior_report_ManagedMoney_NetPosition_change",
+          "prior_report_ManagedMoney_LongPosition_change",
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
+        ],
+        "C_4": [
+          "prior_report_ManagedMoney_ShortPosition_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change"
+        ],
+        "C_5": [
+          "prior_5D_F1_OI_change",
+          "prior_5D_F1MinusF2_openinterest_change"
+        ]
+      },
+      "selected_cluster_names": [
+        "C_0",
+        "C_1",
+        "C_3"
+      ],
+      "purged_feature_clusters": {
+        "C_0": [
+          "F2_RolledPrice_rolling_20D_volatility"
+        ],
+        "C_1": [
+          "F2_RolledPrice_change"
+        ],
+        "C_3": [
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
+        ]
+      },
+      "selected_features": [
+        "F2_RolledPrice_rolling_20D_volatility",
+        "F2_RolledPrice_change",
+        "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
+      ]
+    }
+  }
+}

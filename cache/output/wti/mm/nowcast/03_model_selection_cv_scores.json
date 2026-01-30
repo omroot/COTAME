@@ -1,0 +1,5924 @@
+{
+  "ticker": "wti",
+  "investor_type": "mm",
+  "horizon": "nowcast",
+  "responses": {
+    "ManagedMoney_NetPosition_change": {
+      "cpcv_correlation_by_model": {
+        "lasso": 0.4571406691948526,
+        "ridge": 0.45712406214318074,
+        "rf": 0.5292204681283412,
+        "hgbm": 0.48694170394472386,
+        "ols": 0.45712402590180296,
+        "enet": 0.03748408274800007,
+        "extra": 0.5468429328229962
+      },
+      "best_per_model_params": {
+        "lasso": {
+          "score": 0.4669586818489592,
+          "params": {
+            "alpha": 1.261122987665929e-06
+          }
+        },
+        "ridge": {
+          "score": 0.4668212499855791,
+          "params": {
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        "rf": {
+          "score": 0.5388268685889545,
+          "params": {
+            "n_estimators": 1000,
+            "max_depth": 19,
+            "min_samples_leaf": 1,
+            "max_features": "log2"
+          }
+        },
+        "hgbm": {
+          "score": 0.4895776796322625,
+          "params": {
+            "learning_rate": 0.20317617225236814,
+            "max_depth": 15,
+            "max_iter": 500,
+            "l2_regularization": 0.503080564946794,
+            "max_leaf_nodes": 251
+          }
+        },
+        "ols": {
+          "score": 0.4668208180184083,
+          "params": {}
+        },
+        "enet": {
+          "score": 0.44370823127780445,
+          "params": {
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        "extra": {
+          "score": 0.5381326574479938,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 23,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        }
+      },
+      "selected_model": "extra",
+      "selected_model_params": {
+        "n_estimators": 200,
+        "max_depth": 23,
+        "min_samples_leaf": 9,
+        "max_features": "log2"
+      },
+      "optuna_trial_history": [
+        {
+          "number": 0,
+          "model": "lasso",
+          "score": 0.4672284310950049,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.156732719914599
+          }
+        },
+        {
+          "number": 1,
+          "model": "ridge",
+          "score": 0.4668212499855791,
+          "params": {
+            "model": "ridge",
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        {
+          "number": 2,
+          "model": "rf",
+          "score": 0.5598411722313182,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 15,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 3,
+          "model": "hgbm",
+          "score": 0.5225753786785508,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.10057690178153984,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.6842330265121569,
+            "max_leaf_nodes": 121
+          }
+        },
+        {
+          "number": 4,
+          "model": "ridge",
+          "score": 0.4672663580576081,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.047930525507821314
+          }
+        },
+        {
+          "number": 5,
+          "model": "ols",
+          "score": 0.4668208180184083,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 6,
+          "model": "enet",
+          "score": 0.44370823127780445,
+          "params": {
+            "model": "enet",
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        {
+          "number": 7,
+          "model": "ols",
+          "score": 0.4668208180184083,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 8,
+          "model": "hgbm",
+          "score": 0.5390300114728034,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.03499331111708852,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.3109823217156622,
+            "max_leaf_nodes": 93
+          }
+        },
+        {
+          "number": 9,
+          "model": "ols",
+          "score": 0.4668208180184083,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 10,
+          "model": "rf",
+          "score": 0.5598442665454003,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 27,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 11,
+          "model": "rf",
+          "score": 0.5598442665454003,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 30,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 12,
+          "model": "rf",
+          "score": 0.5598442665454003,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 30,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 13,
+          "model": "extra",
+          "score": 0.5415130832974664,
+          "params": {
+            "model": "extra",
+            "n_estimators": 600,
+            "max_depth": 30,
+            "min_samples_leaf": 5,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 14,
+          "model": "rf",
+          "score": 0.5623581164788785,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 22,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 15,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 21,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 16,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 20,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 17,
+          "model": "enet",
+          "score": 0.47724978280220187,
+          "params": {
+            "model": "enet",
+            "alpha": 1.1633263858100045e-06,
+            "l1_ratio": 0.9653379460654555,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 18,
+          "model": "lasso",
+          "score": 0.468866492140955,
+          "params": {
+            "model": "lasso",
+            "alpha": 9.714586134002047
+          }
+        },
+        {
+          "number": 19,
+          "model": "extra",
+          "score": 0.5411812796136443,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 21,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 20,
+          "model": "rf",
+          "score": 0.562282996622711,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 17,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 21,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 22,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 22,
+          "model": "rf",
+          "score": 0.562282996622711,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 21,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 23,
+          "model": "rf",
+          "score": 0.5615490456395202,
+          "params": {
+            "model": "rf",
+            "n_estimators": 200,
+            "max_depth": 16,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 24,
+          "model": "rf",
+          "score": 0.56159913915457,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 24,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 25,
+          "model": "rf",
+          "score": 0.5571900539250634,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 6,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 26,
+          "model": "rf",
+          "score": 0.5388268685889545,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 19,
+            "min_samples_leaf": 1,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 27,
+          "model": "enet",
+          "score": 0.46821972450509364,
+          "params": {
+            "model": "enet",
+            "alpha": 7.894103404616828e-05,
+            "l1_ratio": 0.037369388237146195,
+            "loss": "huber",
+            "epsilon": 0.19255826811040527
+          }
+        },
+        {
+          "number": 28,
+          "model": "ridge",
+          "score": 0.4800114389085519,
+          "params": {
+            "model": "ridge",
+            "alpha": 442.5093801422389
+          }
+        },
+        {
+          "number": 29,
+          "model": "lasso",
+          "score": 0.4669588347193453,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0007305754446019548
+          }
+        },
+        {
+          "number": 30,
+          "model": "extra",
+          "score": 0.5417138723585361,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 25,
+            "min_samples_leaf": 6,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 31,
+          "model": "rf",
+          "score": 0.5623581164788785,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 22,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 32,
+          "model": "rf",
+          "score": 0.5616078520314713,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 19,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 33,
+          "model": "rf",
+          "score": 0.56159913915457,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 24,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 34,
+          "model": "hgbm",
+          "score": 0.5515463646340619,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.002743023307727101,
+            "max_depth": 3,
+            "max_iter": 1000,
+            "l2_regularization": 0.054917552055816055,
+            "max_leaf_nodes": 255
+          }
+        },
+        {
+          "number": 35,
+          "model": "rf",
+          "score": 0.5623581164788785,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 19,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 36,
+          "model": "ridge",
+          "score": 0.4785507479927953,
+          "params": {
+            "model": "ridge",
+            "alpha": 906.6118860721004
+          }
+        },
+        {
+          "number": 37,
+          "model": "lasso",
+          "score": 0.4669586818489592,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.261122987665929e-06
+          }
+        },
+        {
+          "number": 38,
+          "model": "rf",
+          "score": 0.561555234855463,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 13,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 39,
+          "model": "hgbm",
+          "score": 0.5416710090541457,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0011976520841200263,
+            "max_depth": 15,
+            "max_iter": 800,
+            "l2_regularization": 0.9664981016783335,
+            "max_leaf_nodes": 21
+          }
+        },
+        {
+          "number": 40,
+          "model": "ols",
+          "score": 0.4668208180184083,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 41,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 19,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 42,
+          "model": "rf",
+          "score": 0.5623581164788785,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 22,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 43,
+          "model": "rf",
+          "score": 0.5616078520314715,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 23,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 44,
+          "model": "rf",
+          "score": 0.562282996622711,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 27,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 45,
+          "model": "rf",
+          "score": 0.5616078520314713,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 26,
+            "min_samples_leaf": 9,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 46,
+          "model": "ridge",
+          "score": 0.4775898410980847,
+          "params": {
+            "model": "ridge",
+            "alpha": 10.98513769813624
+          }
+        },
+        {
+          "number": 47,
+          "model": "enet",
+          "score": 0.47724979347877305,
+          "params": {
+            "model": "enet",
+            "alpha": 6.150833182882781e-06,
+            "l1_ratio": 0.9174175925062459,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 48,
+          "model": "ols",
+          "score": 0.4668208180184083,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 49,
+          "model": "rf",
+          "score": 0.5590459718152253,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 22,
+            "min_samples_leaf": 7,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 50,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 17,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 51,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 20,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 52,
+          "model": "rf",
+          "score": 0.5616078520314713,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 53,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 21,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 54,
+          "model": "extra",
+          "score": 0.5381326574479938,
+          "params": {
+            "model": "extra",
+            "n_estimators": 200,
+            "max_depth": 23,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 55,
+          "model": "rf",
+          "score": 0.562282996622711,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 20,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 56,
+          "model": "hgbm",
+          "score": 0.4895776796322625,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.20317617225236814,
+            "max_depth": 15,
+            "max_iter": 500,
+            "l2_regularization": 0.503080564946794,
+            "max_leaf_nodes": 251
+          }
+        },
+        {
+          "number": 57,
+          "model": "rf",
+          "score": 0.5600132770460287,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 23,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 58,
+          "model": "rf",
+          "score": 0.5600209134141599,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 25,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 59,
+          "model": "lasso",
+          "score": 0.4669589599368685,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0013279658765191613
+          }
+        },
+        {
+          "number": 60,
+          "model": "enet",
+          "score": 0.468269131732555,
+          "params": {
+            "model": "enet",
+            "alpha": 1.4563007780702217e-05,
+            "l1_ratio": 0.502306324418736,
+            "loss": "huber",
+            "epsilon": 0.13787813405129054
+          }
+        },
+        {
+          "number": 61,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 22,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 62,
+          "model": "rf",
+          "score": 0.5623581164788785,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 22,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 63,
+          "model": "rf",
+          "score": 0.5616078520314713,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 20,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 64,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 21,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 65,
+          "model": "rf",
+          "score": 0.5519191088458877,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 28,
+            "min_samples_leaf": 4,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 66,
+          "model": "rf",
+          "score": 0.5600209134141599,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 67,
+          "model": "ols",
+          "score": 0.4668208180184083,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 68,
+          "model": "extra",
+          "score": 0.5388304425771612,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 22,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 69,
+          "model": "rf",
+          "score": 0.56159913915457,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 24,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 70,
+          "model": "rf",
+          "score": 0.5623581164788785,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 71,
+          "model": "rf",
+          "score": 0.5623581164788785,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 72,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 73,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 16,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 74,
+          "model": "rf",
+          "score": 0.5623581164788783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 19,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 75,
+          "model": "ridge",
+          "score": 0.4689315149306623,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.26576822467787686
+          }
+        },
+        {
+          "number": 76,
+          "model": "rf",
+          "score": 0.5616078520314713,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 21,
+            "min_samples_leaf": 9,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 77,
+          "model": "lasso",
+          "score": 0.4669587275627972,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.00021935244301421607
+          }
+        },
+        {
+          "number": 78,
+          "model": "hgbm",
+          "score": 0.5376728978862734,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.007807986931204357,
+            "max_depth": 9,
+            "max_iter": 500,
+            "l2_regularization": 0.9669109423262804,
+            "max_leaf_nodes": 191
+          }
+        },
+        {
+          "number": 79,
+          "model": "rf",
+          "score": 0.562282996622711,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 17,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        }
+      ]
+    },
+    "ManagedMoney_LongPosition_change": {
+      "cpcv_correlation_by_model": {
+        "lasso": 0.22730046346114754,
+        "ridge": 0.2569878281426757,
+        "rf": 0.3193646503151017,
+        "hgbm": 0.227912501806391,
+        "ols": 0.22726887979864802,
+        "enet": 0.03143975380719649,
+        "extra": 0.29909797539722727
+      },
+      "best_per_model_params": {
+        "lasso": {
+          "score": 0.3814799253604776,
+          "params": {
+            "alpha": 1.261122987665929e-06
+          }
+        },
+        "ridge": {
+          "score": 0.376414691667081,
+          "params": {
+            "alpha": 906.6118860721004
+          }
+        },
+        "rf": {
+          "score": 0.41285591824445494,
+          "params": {
+            "n_estimators": 1000,
+            "max_depth": 3,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        "hgbm": {
+          "score": 0.3301017626842415,
+          "params": {
+            "learning_rate": 0.25053236081220304,
+            "max_depth": 12,
+            "max_iter": 500,
+            "l2_regularization": 0.9997880756517733,
+            "max_leaf_nodes": 183
+          }
+        },
+        "ols": {
+          "score": 0.38126012221459066,
+          "params": {}
+        },
+        "enet": {
+          "score": 0.2948537158425565,
+          "params": {
+            "alpha": 2.2047292731556803e-05,
+            "l1_ratio": 0.5320050672678175,
+            "loss": "huber",
+            "epsilon": 0.15022797170428165
+          }
+        },
+        "extra": {
+          "score": 0.4074188015123243,
+          "params": {
+            "n_estimators": 1000,
+            "max_depth": 7,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        }
+      },
+      "selected_model": "rf",
+      "selected_model_params": {
+        "n_estimators": 1000,
+        "max_depth": 3,
+        "min_samples_leaf": 10,
+        "max_features": "log2"
+      },
+      "optuna_trial_history": [
+        {
+          "number": 0,
+          "model": "lasso",
+          "score": 0.38195721971007496,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.156732719914599
+          }
+        },
+        {
+          "number": 1,
+          "model": "ridge",
+          "score": 0.3812607903357288,
+          "params": {
+            "model": "ridge",
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        {
+          "number": 2,
+          "model": "rf",
+          "score": 0.43084073643439885,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 15,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 3,
+          "model": "hgbm",
+          "score": 0.38098537731133103,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.10057690178153984,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.6842330265121569,
+            "max_leaf_nodes": 121
+          }
+        },
+        {
+          "number": 4,
+          "model": "ridge",
+          "score": 0.381950053914398,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.047930525507821314
+          }
+        },
+        {
+          "number": 5,
+          "model": "ols",
+          "score": 0.38126012221459066,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 6,
+          "model": "enet",
+          "score": 0.29939234825340694,
+          "params": {
+            "model": "enet",
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        {
+          "number": 7,
+          "model": "ols",
+          "score": 0.38126012221459066,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 8,
+          "model": "hgbm",
+          "score": 0.40617182287604103,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.03499331111708852,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.3109823217156622,
+            "max_leaf_nodes": 93
+          }
+        },
+        {
+          "number": 9,
+          "model": "ols",
+          "score": 0.38126012221459066,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 10,
+          "model": "rf",
+          "score": 0.4308375770723662,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 27,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 11,
+          "model": "rf",
+          "score": 0.4308375770723662,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 30,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 12,
+          "model": "rf",
+          "score": 0.4308375770723662,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 22,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 13,
+          "model": "extra",
+          "score": 0.4148281987171551,
+          "params": {
+            "model": "extra",
+            "n_estimators": 600,
+            "max_depth": 19,
+            "min_samples_leaf": 5,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 14,
+          "model": "rf",
+          "score": 0.43222754207140374,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 15,
+          "model": "rf",
+          "score": 0.4322396772094843,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 16,
+          "model": "rf",
+          "score": 0.43223784278307886,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 17,
+          "model": "enet",
+          "score": 0.40028523843594077,
+          "params": {
+            "model": "enet",
+            "alpha": 1.1633263858100045e-06,
+            "l1_ratio": 0.9653379460654555,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 18,
+          "model": "lasso",
+          "score": 0.38494609962871096,
+          "params": {
+            "model": "lasso",
+            "alpha": 9.714586134002047
+          }
+        },
+        {
+          "number": 19,
+          "model": "extra",
+          "score": 0.4171026585474547,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 11,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 20,
+          "model": "rf",
+          "score": 0.41285591824445494,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 3,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 21,
+          "model": "rf",
+          "score": 0.43222754207140374,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 22,
+          "model": "rf",
+          "score": 0.43197470452292647,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 11,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 23,
+          "model": "rf",
+          "score": 0.43127855225046724,
+          "params": {
+            "model": "rf",
+            "n_estimators": 200,
+            "max_depth": 19,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 24,
+          "model": "rf",
+          "score": 0.43161414036772167,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 12,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 25,
+          "model": "rf",
+          "score": 0.42886389188527163,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 17,
+            "min_samples_leaf": 6,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 26,
+          "model": "rf",
+          "score": 0.42188857509293853,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 8,
+            "min_samples_leaf": 1,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 27,
+          "model": "enet",
+          "score": 0.35658613981165516,
+          "params": {
+            "model": "enet",
+            "alpha": 7.894103404616828e-05,
+            "l1_ratio": 0.037369388237146195,
+            "loss": "huber",
+            "epsilon": 0.19255826811040527
+          }
+        },
+        {
+          "number": 28,
+          "model": "ridge",
+          "score": 0.3854614112905144,
+          "params": {
+            "model": "ridge",
+            "alpha": 442.5093801422389
+          }
+        },
+        {
+          "number": 29,
+          "model": "lasso",
+          "score": 0.38148021285752226,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0007305754446019548
+          }
+        },
+        {
+          "number": 30,
+          "model": "extra",
+          "score": 0.4168438222368777,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 6,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 31,
+          "model": "rf",
+          "score": 0.4322275948356963,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 32,
+          "model": "rf",
+          "score": 0.431738585462348,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 17,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 33,
+          "model": "rf",
+          "score": 0.4314879984498096,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 10,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 34,
+          "model": "hgbm",
+          "score": 0.40939240295135065,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.002743023307727101,
+            "max_depth": 13,
+            "max_iter": 1000,
+            "l2_regularization": 0.054917552055816055,
+            "max_leaf_nodes": 255
+          }
+        },
+        {
+          "number": 35,
+          "model": "rf",
+          "score": 0.4322267685152919,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 16,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 36,
+          "model": "ridge",
+          "score": 0.376414691667081,
+          "params": {
+            "model": "ridge",
+            "alpha": 906.6118860721004
+          }
+        },
+        {
+          "number": 37,
+          "model": "lasso",
+          "score": 0.3814799253604776,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.261122987665929e-06
+          }
+        },
+        {
+          "number": 38,
+          "model": "rf",
+          "score": 0.4309964874422108,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 20,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 39,
+          "model": "hgbm",
+          "score": 0.4114688019777891,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0011976520841200263,
+            "max_depth": 13,
+            "max_iter": 800,
+            "l2_regularization": 0.9664981016783335,
+            "max_leaf_nodes": 21
+          }
+        },
+        {
+          "number": 40,
+          "model": "ols",
+          "score": 0.38126012221459066,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 41,
+          "model": "rf",
+          "score": 0.4322275948356963,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 42,
+          "model": "rf",
+          "score": 0.4322275948356963,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 43,
+          "model": "rf",
+          "score": 0.43148313403652266,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 9,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 44,
+          "model": "rf",
+          "score": 0.4320016125646146,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 17,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 45,
+          "model": "rf",
+          "score": 0.43173665976737857,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 9,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 46,
+          "model": "ridge",
+          "score": 0.39788614783959925,
+          "params": {
+            "model": "ridge",
+            "alpha": 10.98513769813624
+          }
+        },
+        {
+          "number": 47,
+          "model": "enet",
+          "score": 0.4002852341605524,
+          "params": {
+            "model": "enet",
+            "alpha": 6.150833182882781e-06,
+            "l1_ratio": 0.9174175925062459,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 48,
+          "model": "ols",
+          "score": 0.38126012221459066,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 49,
+          "model": "rf",
+          "score": 0.4303632594876778,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 15,
+            "min_samples_leaf": 7,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 50,
+          "model": "rf",
+          "score": 0.4322267685152919,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 22,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 51,
+          "model": "rf",
+          "score": 0.4322275948356963,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 52,
+          "model": "rf",
+          "score": 0.43173813844794,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 16,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 53,
+          "model": "rf",
+          "score": 0.43223967720948425,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 54,
+          "model": "extra",
+          "score": 0.4136641187459635,
+          "params": {
+            "model": "extra",
+            "n_estimators": 200,
+            "max_depth": 11,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 55,
+          "model": "rf",
+          "score": 0.4297597220520279,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 6,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 56,
+          "model": "rf",
+          "score": 0.4315401238323377,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 57,
+          "model": "hgbm",
+          "score": 0.4109534720477351,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.006419588568815613,
+            "max_depth": 14,
+            "max_iter": 400,
+            "l2_regularization": 0.584457419124367,
+            "max_leaf_nodes": 255
+          }
+        },
+        {
+          "number": 58,
+          "model": "rf",
+          "score": 0.431738585462348,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 59,
+          "model": "lasso",
+          "score": 0.3814804483494076,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0013279658765191613
+          }
+        },
+        {
+          "number": 60,
+          "model": "rf",
+          "score": 0.43100855081684936,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 10,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 61,
+          "model": "rf",
+          "score": 0.4322275948356963,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 62,
+          "model": "rf",
+          "score": 0.43223784278307886,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 63,
+          "model": "rf",
+          "score": 0.4322396772094843,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 64,
+          "model": "enet",
+          "score": 0.2948537158425565,
+          "params": {
+            "model": "enet",
+            "alpha": 2.2047292731556803e-05,
+            "l1_ratio": 0.5320050672678175,
+            "loss": "huber",
+            "epsilon": 0.15022797170428165
+          }
+        },
+        {
+          "number": 65,
+          "model": "rf",
+          "score": 0.4258897901269157,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 4,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 66,
+          "model": "rf",
+          "score": 0.43097286993231704,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 10,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 67,
+          "model": "ols",
+          "score": 0.38126012221459066,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 68,
+          "model": "rf",
+          "score": 0.43223784278307886,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 69,
+          "model": "extra",
+          "score": 0.4074188015123243,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 7,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 70,
+          "model": "rf",
+          "score": 0.43171646136514746,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 71,
+          "model": "rf",
+          "score": 0.4322396772094843,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 72,
+          "model": "rf",
+          "score": 0.4322396772094843,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 73,
+          "model": "rf",
+          "score": 0.43219789644920575,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 11,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 74,
+          "model": "rf",
+          "score": 0.4322396772094843,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 75,
+          "model": "ridge",
+          "score": 0.3845434243985054,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.26576822467787686
+          }
+        },
+        {
+          "number": 76,
+          "model": "rf",
+          "score": 0.4314421886941704,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 9,
+            "min_samples_leaf": 9,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 77,
+          "model": "rf",
+          "score": 0.4322396772094843,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 78,
+          "model": "lasso",
+          "score": 0.38148003447028045,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0002780475574146242
+          }
+        },
+        {
+          "number": 79,
+          "model": "hgbm",
+          "score": 0.3301017626842415,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.25053236081220304,
+            "max_depth": 12,
+            "max_iter": 500,
+            "l2_regularization": 0.9997880756517733,
+            "max_leaf_nodes": 183
+          }
+        }
+      ]
+    },
+    "ManagedMoney_ShortPosition_change": {
+      "cpcv_correlation_by_model": {
+        "lasso": 0.30909230045722635,
+        "ridge": 0.30908985403181855,
+        "rf": 0.3807025185704729,
+        "hgbm": 0.38153996313515576,
+        "ols": 0.30908984826777236,
+        "enet": -0.04291447750536222,
+        "extra": 0.3836411442546314
+      },
+      "best_per_model_params": {
+        "lasso": {
+          "score": 0.33718273468781207,
+          "params": {
+            "alpha": 1.261122987665929e-06
+          }
+        },
+        "ridge": {
+          "score": 0.337180864266028,
+          "params": {
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        "rf": {
+          "score": 0.3663335868702405,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 23,
+            "min_samples_leaf": 1,
+            "max_features": "log2"
+          }
+        },
+        "hgbm": {
+          "score": 0.30228671089267556,
+          "params": {
+            "learning_rate": 0.2950581131879257,
+            "max_depth": 15,
+            "max_iter": 700,
+            "l2_regularization": 0.5759875122445917,
+            "max_leaf_nodes": 144
+          }
+        },
+        "ols": {
+          "score": 0.33718080156387825,
+          "params": {}
+        },
+        "enet": {
+          "score": 0.28066701168913605,
+          "params": {
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        "extra": {
+          "score": 0.36229374560790945,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 9,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+          }
+        }
+      },
+      "selected_model": "extra",
+      "selected_model_params": {
+        "n_estimators": 200,
+        "max_depth": 9,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt"
+      },
+      "optuna_trial_history": [
+        {
+          "number": 0,
+          "model": "lasso",
+          "score": 0.33728650742778465,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.156732719914599
+          }
+        },
+        {
+          "number": 1,
+          "model": "ridge",
+          "score": 0.337180864266028,
+          "params": {
+            "model": "ridge",
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        {
+          "number": 2,
+          "model": "rf",
+          "score": 0.39509467710116647,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 15,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 3,
+          "model": "hgbm",
+          "score": 0.35568674920024507,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.10057690178153984,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.6842330265121569,
+            "max_leaf_nodes": 121
+          }
+        },
+        {
+          "number": 4,
+          "model": "ridge",
+          "score": 0.3372466661966682,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.047930525507821314
+          }
+        },
+        {
+          "number": 5,
+          "model": "ols",
+          "score": 0.33718080156387825,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 6,
+          "model": "enet",
+          "score": 0.28066701168913605,
+          "params": {
+            "model": "enet",
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        {
+          "number": 7,
+          "model": "ols",
+          "score": 0.33718080156387825,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 8,
+          "model": "hgbm",
+          "score": 0.38923230790222013,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.03499331111708852,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.3109823217156622,
+            "max_leaf_nodes": 93
+          }
+        },
+        {
+          "number": 9,
+          "model": "ols",
+          "score": 0.33718080156387825,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 10,
+          "model": "rf",
+          "score": 0.3950436232053296,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 27,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 11,
+          "model": "rf",
+          "score": 0.3950436232053296,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 30,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 12,
+          "model": "rf",
+          "score": 0.39504164937604724,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 22,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 13,
+          "model": "extra",
+          "score": 0.3779964062818071,
+          "params": {
+            "model": "extra",
+            "n_estimators": 600,
+            "max_depth": 19,
+            "min_samples_leaf": 5,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 14,
+          "model": "rf",
+          "score": 0.39549183770027074,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 15,
+          "model": "rf",
+          "score": 0.3955220927473826,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 16,
+          "model": "rf",
+          "score": 0.39548121776764705,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 17,
+          "model": "enet",
+          "score": 0.3390695885259684,
+          "params": {
+            "model": "enet",
+            "alpha": 1.1633263858100045e-06,
+            "l1_ratio": 0.9653379460654555,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 18,
+          "model": "lasso",
+          "score": 0.3378199113331624,
+          "params": {
+            "model": "lasso",
+            "alpha": 9.714586134002047
+          }
+        },
+        {
+          "number": 19,
+          "model": "extra",
+          "score": 0.37659662255716164,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 11,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 20,
+          "model": "rf",
+          "score": 0.384041918395605,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 3,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 21,
+          "model": "rf",
+          "score": 0.3954918377002708,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 22,
+          "model": "rf",
+          "score": 0.3956219226109742,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 17,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 23,
+          "model": "rf",
+          "score": 0.3956188219575777,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 19,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 24,
+          "model": "rf",
+          "score": 0.39499081946866105,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 20,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 25,
+          "model": "rf",
+          "score": 0.3913788953209614,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 18,
+            "min_samples_leaf": 6,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 26,
+          "model": "rf",
+          "score": 0.3663335868702405,
+          "params": {
+            "model": "rf",
+            "n_estimators": 200,
+            "max_depth": 23,
+            "min_samples_leaf": 1,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 27,
+          "model": "enet",
+          "score": 0.3429351907711092,
+          "params": {
+            "model": "enet",
+            "alpha": 7.894103404616828e-05,
+            "l1_ratio": 0.037369388237146195,
+            "loss": "huber",
+            "epsilon": 0.19255826811040527
+          }
+        },
+        {
+          "number": 28,
+          "model": "ridge",
+          "score": 0.34241021412343264,
+          "params": {
+            "model": "ridge",
+            "alpha": 442.5093801422389
+          }
+        },
+        {
+          "number": 29,
+          "model": "lasso",
+          "score": 0.33718279918056143,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0007305754446019548
+          }
+        },
+        {
+          "number": 30,
+          "model": "extra",
+          "score": 0.3788237395530916,
+          "params": {
+            "model": "extra",
+            "n_estimators": 800,
+            "max_depth": 10,
+            "min_samples_leaf": 6,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 31,
+          "model": "rf",
+          "score": 0.3956219226109741,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 17,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 32,
+          "model": "rf",
+          "score": 0.3949783621515271,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 17,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 33,
+          "model": "rf",
+          "score": 0.39519916936786637,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 22,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 34,
+          "model": "hgbm",
+          "score": 0.39107088034189225,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.002743023307727101,
+            "max_depth": 12,
+            "max_iter": 1000,
+            "l2_regularization": 0.054917552055816055,
+            "max_leaf_nodes": 255
+          }
+        },
+        {
+          "number": 35,
+          "model": "rf",
+          "score": 0.39561506282718634,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 16,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 36,
+          "model": "ridge",
+          "score": 0.34145665728612035,
+          "params": {
+            "model": "ridge",
+            "alpha": 906.6118860721004
+          }
+        },
+        {
+          "number": 37,
+          "model": "lasso",
+          "score": 0.33718273468781207,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.261122987665929e-06
+          }
+        },
+        {
+          "number": 38,
+          "model": "rf",
+          "score": 0.39518341657341066,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 16,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 39,
+          "model": "hgbm",
+          "score": 0.39687937862566974,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0011976520841200263,
+            "max_depth": 15,
+            "max_iter": 800,
+            "l2_regularization": 0.9664981016783335,
+            "max_leaf_nodes": 21
+          }
+        },
+        {
+          "number": 40,
+          "model": "hgbm",
+          "score": 0.3972921779346043,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.001250203482351172,
+            "max_depth": 15,
+            "max_iter": 800,
+            "l2_regularization": 0.9995265388695971,
+            "max_leaf_nodes": 18
+          }
+        },
+        {
+          "number": 41,
+          "model": "hgbm",
+          "score": 0.3964627962589714,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0010125347615880804,
+            "max_depth": 15,
+            "max_iter": 800,
+            "l2_regularization": 0.9788426133811202,
+            "max_leaf_nodes": 15
+          }
+        },
+        {
+          "number": 42,
+          "model": "hgbm",
+          "score": 0.39791936473273126,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0013294972884840583,
+            "max_depth": 14,
+            "max_iter": 800,
+            "l2_regularization": 0.9666333049756255,
+            "max_leaf_nodes": 16
+          }
+        },
+        {
+          "number": 43,
+          "model": "hgbm",
+          "score": 0.3971507797328017,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.001044459179636369,
+            "max_depth": 14,
+            "max_iter": 800,
+            "l2_regularization": 0.9828285589686266,
+            "max_leaf_nodes": 17
+          }
+        },
+        {
+          "number": 44,
+          "model": "hgbm",
+          "score": 0.3968881243063596,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.001027807459190882,
+            "max_depth": 14,
+            "max_iter": 800,
+            "l2_regularization": 0.998401288277716,
+            "max_leaf_nodes": 16
+          }
+        },
+        {
+          "number": 45,
+          "model": "hgbm",
+          "score": 0.39717071995631803,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.001111946932493419,
+            "max_depth": 14,
+            "max_iter": 800,
+            "l2_regularization": 0.9862117574488898,
+            "max_leaf_nodes": 15
+          }
+        },
+        {
+          "number": 46,
+          "model": "hgbm",
+          "score": 0.39671562384255316,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0010355888335873027,
+            "max_depth": 13,
+            "max_iter": 800,
+            "l2_regularization": 0.99213760384403,
+            "max_leaf_nodes": 15
+          }
+        },
+        {
+          "number": 47,
+          "model": "hgbm",
+          "score": 0.3979855033088105,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0032685780821630145,
+            "max_depth": 14,
+            "max_iter": 700,
+            "l2_regularization": 0.9905542903307457,
+            "max_leaf_nodes": 16
+          }
+        },
+        {
+          "number": 48,
+          "model": "hgbm",
+          "score": 0.39110664142326296,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.004716607215141842,
+            "max_depth": 13,
+            "max_iter": 600,
+            "l2_regularization": 0.8121699502159827,
+            "max_leaf_nodes": 59
+          }
+        },
+        {
+          "number": 49,
+          "model": "hgbm",
+          "score": 0.39520265089478834,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0038476942866018074,
+            "max_depth": 7,
+            "max_iter": 700,
+            "l2_regularization": 0.8123679875062394,
+            "max_leaf_nodes": 52
+          }
+        },
+        {
+          "number": 50,
+          "model": "hgbm",
+          "score": 0.39498476249492004,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.002290334563282296,
+            "max_depth": 12,
+            "max_iter": 900,
+            "l2_regularization": 0.8428801829446873,
+            "max_leaf_nodes": 58
+          }
+        },
+        {
+          "number": 51,
+          "model": "hgbm",
+          "score": 0.3957596285266531,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.001029905353494607,
+            "max_depth": 14,
+            "max_iter": 700,
+            "l2_regularization": 0.9999216837744066,
+            "max_leaf_nodes": 17
+          }
+        },
+        {
+          "number": 52,
+          "model": "hgbm",
+          "score": 0.39918663377098246,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0018050602882486166,
+            "max_depth": 14,
+            "max_iter": 800,
+            "l2_regularization": 0.9960035159669068,
+            "max_leaf_nodes": 15
+          }
+        },
+        {
+          "number": 53,
+          "model": "hgbm",
+          "score": 0.3945923352602689,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0024004982184932925,
+            "max_depth": 13,
+            "max_iter": 900,
+            "l2_regularization": 0.8676944830783382,
+            "max_leaf_nodes": 41
+          }
+        },
+        {
+          "number": 54,
+          "model": "hgbm",
+          "score": 0.39474105412034277,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0018359928581069334,
+            "max_depth": 14,
+            "max_iter": 700,
+            "l2_regularization": 0.8906066188502137,
+            "max_leaf_nodes": 43
+          }
+        },
+        {
+          "number": 55,
+          "model": "ols",
+          "score": 0.33718080156387825,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 56,
+          "model": "hgbm",
+          "score": 0.3598031321028193,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.00801173544557102,
+            "max_depth": 15,
+            "max_iter": 900,
+            "l2_regularization": 0.8981453211651417,
+            "max_leaf_nodes": 187
+          }
+        },
+        {
+          "number": 57,
+          "model": "hgbm",
+          "score": 0.3947783393241165,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0019434364026994866,
+            "max_depth": 11,
+            "max_iter": 700,
+            "l2_regularization": 0.6903184686473116,
+            "max_leaf_nodes": 40
+          }
+        },
+        {
+          "number": 58,
+          "model": "hgbm",
+          "score": 0.39498929873733984,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0017880622929558692,
+            "max_depth": 13,
+            "max_iter": 500,
+            "l2_regularization": 0.9980493820817189,
+            "max_leaf_nodes": 36
+          }
+        },
+        {
+          "number": 59,
+          "model": "hgbm",
+          "score": 0.3960002197745549,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0016621631776072429,
+            "max_depth": 8,
+            "max_iter": 800,
+            "l2_regularization": 0.9048691759363068,
+            "max_leaf_nodes": 74
+          }
+        },
+        {
+          "number": 60,
+          "model": "hgbm",
+          "score": 0.39074468912894017,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.004848533964720292,
+            "max_depth": 14,
+            "max_iter": 600,
+            "l2_regularization": 0.7397924425192568,
+            "max_leaf_nodes": 32
+          }
+        },
+        {
+          "number": 61,
+          "model": "hgbm",
+          "score": 0.3970444672579195,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0010586192650204479,
+            "max_depth": 14,
+            "max_iter": 800,
+            "l2_regularization": 0.994973268964723,
+            "max_leaf_nodes": 16
+          }
+        },
+        {
+          "number": 62,
+          "model": "hgbm",
+          "score": 0.3990553510694238,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0015404870058909738,
+            "max_depth": 15,
+            "max_iter": 900,
+            "l2_regularization": 0.9122941409560186,
+            "max_leaf_nodes": 15
+          }
+        },
+        {
+          "number": 63,
+          "model": "hgbm",
+          "score": 0.3952682452278456,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0017474690564698047,
+            "max_depth": 15,
+            "max_iter": 900,
+            "l2_regularization": 0.8932912622569902,
+            "max_leaf_nodes": 33
+          }
+        },
+        {
+          "number": 64,
+          "model": "enet",
+          "score": 0.3390695967057956,
+          "params": {
+            "model": "enet",
+            "alpha": 7.96490035384732e-06,
+            "l1_ratio": 0.9579248173042284,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 65,
+          "model": "hgbm",
+          "score": 0.3947914072467009,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0016104367191875778,
+            "max_depth": 4,
+            "max_iter": 1000,
+            "l2_regularization": 0.9183286454978102,
+            "max_leaf_nodes": 15
+          }
+        },
+        {
+          "number": 66,
+          "model": "ols",
+          "score": 0.33718080156387825,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 67,
+          "model": "hgbm",
+          "score": 0.39180244425674116,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.00298386342413985,
+            "max_depth": 15,
+            "max_iter": 900,
+            "l2_regularization": 0.9271865115648745,
+            "max_leaf_nodes": 33
+          }
+        },
+        {
+          "number": 68,
+          "model": "extra",
+          "score": 0.36229374560790945,
+          "params": {
+            "model": "extra",
+            "n_estimators": 200,
+            "max_depth": 9,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 69,
+          "model": "ridge",
+          "score": 0.3371904432059937,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.006898531868652307
+          }
+        },
+        {
+          "number": 70,
+          "model": "hgbm",
+          "score": 0.39558126320249454,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0015742912297200332,
+            "max_depth": 13,
+            "max_iter": 700,
+            "l2_regularization": 0.420852066125199,
+            "max_leaf_nodes": 34
+          }
+        },
+        {
+          "number": 71,
+          "model": "hgbm",
+          "score": 0.39785886319620617,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0013047342955038086,
+            "max_depth": 14,
+            "max_iter": 800,
+            "l2_regularization": 0.9423240737744454,
+            "max_leaf_nodes": 16
+          }
+        },
+        {
+          "number": 72,
+          "model": "hgbm",
+          "score": 0.3948636211655212,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0015099174721281557,
+            "max_depth": 14,
+            "max_iter": 800,
+            "l2_regularization": 0.9305809354400878,
+            "max_leaf_nodes": 29
+          }
+        },
+        {
+          "number": 73,
+          "model": "hgbm",
+          "score": 0.39820223737376753,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0014276122213846682,
+            "max_depth": 15,
+            "max_iter": 800,
+            "l2_regularization": 0.9312231024879172,
+            "max_leaf_nodes": 16
+          }
+        },
+        {
+          "number": 74,
+          "model": "lasso",
+          "score": 0.3371827909454544,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0006366060304496538
+          }
+        },
+        {
+          "number": 75,
+          "model": "hgbm",
+          "score": 0.3918501660342643,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.003064328800064146,
+            "max_depth": 15,
+            "max_iter": 900,
+            "l2_regularization": 0.8244954844057446,
+            "max_leaf_nodes": 31
+          }
+        },
+        {
+          "number": 76,
+          "model": "enet",
+          "score": 0.3390696996140228,
+          "params": {
+            "model": "enet",
+            "alpha": 8.457891757940586e-06,
+            "l1_ratio": 0.5429949762733866,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 77,
+          "model": "hgbm",
+          "score": 0.30228671089267556,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.2950581131879257,
+            "max_depth": 15,
+            "max_iter": 700,
+            "l2_regularization": 0.5759875122445917,
+            "max_leaf_nodes": 144
+          }
+        },
+        {
+          "number": 78,
+          "model": "hgbm",
+          "score": 0.3557798807226991,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.01103980948635779,
+            "max_depth": 12,
+            "max_iter": 800,
+            "l2_regularization": 0.9297873865565234,
+            "max_leaf_nodes": 52
+          }
+        },
+        {
+          "number": 79,
+          "model": "hgbm",
+          "score": 0.31315140407372555,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.03724123890933172,
+            "max_depth": 13,
+            "max_iter": 900,
+            "l2_regularization": 0.9308972795127886,
+            "max_leaf_nodes": 122
+          }
+        }
+      ]
+    },
+    "ManagedMoney_NetPosition_to_openinterest_change": {
+      "cpcv_correlation_by_model": {
+        "lasso": 0.20449348548307558,
+        "ridge": 0.47885856622953227,
+        "rf": 0.5395126895125606,
+        "hgbm": 0.5345330094474162,
+        "ols": 0.4788585393335764,
+        "enet": 0.1557327656615479,
+        "extra": 0.5400472204587755
+      },
+      "best_per_model_params": {
+        "lasso": {
+          "score": -0.047761550560264855,
+          "params": {
+            "alpha": 1.156732719914599
+          }
+        },
+        "ridge": {
+          "score": 0.5450293057671354,
+          "params": {
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        "rf": {
+          "score": 0.6076462451186093,
+          "params": {
+            "n_estimators": 200,
+            "max_depth": 3,
+            "min_samples_leaf": 1,
+            "max_features": "log2"
+          }
+        },
+        "hgbm": {
+          "score": 0.583799550835774,
+          "params": {
+            "learning_rate": 0.10057690178153984,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.6842330265121569,
+            "max_leaf_nodes": 121
+          }
+        },
+        "ols": {
+          "score": 0.5450292013835084,
+          "params": {}
+        },
+        "enet": {
+          "score": 0.34280668224266503,
+          "params": {
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        "extra": {
+          "score": 0.6070553751544516,
+          "params": {
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        }
+      },
+      "selected_model": "extra",
+      "selected_model_params": {
+        "n_estimators": 1200,
+        "max_depth": 13,
+        "min_samples_leaf": 3,
+        "max_features": "sqrt"
+      },
+      "optuna_trial_history": [
+        {
+          "number": 0,
+          "model": "lasso",
+          "score": -0.047761550560264855,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.156732719914599
+          }
+        },
+        {
+          "number": 1,
+          "model": "ridge",
+          "score": 0.5450293057671354,
+          "params": {
+            "model": "ridge",
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        {
+          "number": 2,
+          "model": "rf",
+          "score": 0.6217034338370249,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 15,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 3,
+          "model": "hgbm",
+          "score": 0.583799550835774,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.10057690178153984,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.6842330265121569,
+            "max_leaf_nodes": 121
+          }
+        },
+        {
+          "number": 4,
+          "model": "ridge",
+          "score": 0.5451401254327312,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.047930525507821314
+          }
+        },
+        {
+          "number": 5,
+          "model": "ols",
+          "score": 0.5450292013835084,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 6,
+          "model": "enet",
+          "score": 0.34280668224266503,
+          "params": {
+            "model": "enet",
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        {
+          "number": 7,
+          "model": "ols",
+          "score": 0.5450292013835084,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 8,
+          "model": "hgbm",
+          "score": 0.6052295819900241,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.03499331111708852,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.3109823217156622,
+            "max_leaf_nodes": 93
+          }
+        },
+        {
+          "number": 9,
+          "model": "ols",
+          "score": 0.5450292013835084,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 10,
+          "model": "rf",
+          "score": 0.621701877385563,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 27,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 11,
+          "model": "rf",
+          "score": 0.621701877385563,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 30,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 12,
+          "model": "rf",
+          "score": 0.621701877385563,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 22,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 13,
+          "model": "extra",
+          "score": 0.6091585328372274,
+          "params": {
+            "model": "extra",
+            "n_estimators": 600,
+            "max_depth": 19,
+            "min_samples_leaf": 5,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 14,
+          "model": "rf",
+          "score": 0.6224368357998069,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 15,
+          "model": "rf",
+          "score": 0.6224320849040625,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 16,
+          "model": "rf",
+          "score": 0.6224358253409996,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 17,
+          "model": "enet",
+          "score": 0.5617103697979794,
+          "params": {
+            "model": "enet",
+            "alpha": 1.1633263858100045e-06,
+            "l1_ratio": 0.9653379460654555,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 18,
+          "model": "lasso",
+          "score": -0.047761550560264855,
+          "params": {
+            "model": "lasso",
+            "alpha": 9.714586134002047
+          }
+        },
+        {
+          "number": 19,
+          "model": "extra",
+          "score": 0.6070553751544516,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 20,
+          "model": "rf",
+          "score": 0.6110476236949905,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 3,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 21,
+          "model": "rf",
+          "score": 0.6224320849040625,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 22,
+          "model": "rf",
+          "score": 0.6224785682408202,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 10,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 23,
+          "model": "rf",
+          "score": 0.6225374106272187,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 8,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 24,
+          "model": "rf",
+          "score": 0.6222929643384992,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 8,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 25,
+          "model": "rf",
+          "score": 0.6193507590817118,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 9,
+            "min_samples_leaf": 6,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 26,
+          "model": "rf",
+          "score": 0.6076462451186093,
+          "params": {
+            "model": "rf",
+            "n_estimators": 200,
+            "max_depth": 3,
+            "min_samples_leaf": 1,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 27,
+          "model": "enet",
+          "score": 0.561667532694808,
+          "params": {
+            "model": "enet",
+            "alpha": 7.894103404616828e-05,
+            "l1_ratio": 0.037369388237146195,
+            "loss": "huber",
+            "epsilon": 0.19255826811040527
+          }
+        },
+        {
+          "number": 28,
+          "model": "ridge",
+          "score": 0.5587744034855979,
+          "params": {
+            "model": "ridge",
+            "alpha": 442.5093801422389
+          }
+        },
+        {
+          "number": 29,
+          "model": "lasso",
+          "score": 0.5515018530924658,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0007305754446019548
+          }
+        },
+        {
+          "number": 30,
+          "model": "extra",
+          "score": 0.6119856637983029,
+          "params": {
+            "model": "extra",
+            "n_estimators": 800,
+            "max_depth": 19,
+            "min_samples_leaf": 6,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 31,
+          "model": "rf",
+          "score": 0.6224785682408202,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 10,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 32,
+          "model": "rf",
+          "score": 0.6223562227295109,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 10,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 33,
+          "model": "rf",
+          "score": 0.6223810878509576,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 16,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 34,
+          "model": "hgbm",
+          "score": 0.6048531389403975,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.002743023307727101,
+            "max_depth": 10,
+            "max_iter": 1000,
+            "l2_regularization": 0.054917552055816055,
+            "max_leaf_nodes": 255
+          }
+        },
+        {
+          "number": 35,
+          "model": "rf",
+          "score": 0.6203957828146246,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 5,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 36,
+          "model": "ridge",
+          "score": 0.556412585467229,
+          "params": {
+            "model": "ridge",
+            "alpha": 906.6118860721004
+          }
+        },
+        {
+          "number": 37,
+          "model": "lasso",
+          "score": 0.5453555194005295,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.261122987665929e-06
+          }
+        },
+        {
+          "number": 38,
+          "model": "rf",
+          "score": 0.6223870902291652,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 11,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 39,
+          "model": "hgbm",
+          "score": 0.6100344583807704,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0011976520841200263,
+            "max_depth": 8,
+            "max_iter": 800,
+            "l2_regularization": 0.9664981016783335,
+            "max_leaf_nodes": 21
+          }
+        },
+        {
+          "number": 40,
+          "model": "ols",
+          "score": 0.5450292013835084,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 41,
+          "model": "rf",
+          "score": 0.6224368357998069,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 42,
+          "model": "rf",
+          "score": 0.6224368357998069,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 43,
+          "model": "rf",
+          "score": 0.6223331010882306,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 18,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 44,
+          "model": "rf",
+          "score": 0.6224368357998069,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 45,
+          "model": "rf",
+          "score": 0.6223418974514783,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 11,
+            "min_samples_leaf": 9,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 46,
+          "model": "ridge",
+          "score": 0.5542235471150877,
+          "params": {
+            "model": "ridge",
+            "alpha": 10.98513769813624
+          }
+        },
+        {
+          "number": 47,
+          "model": "ols",
+          "score": 0.5450292013835084,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 48,
+          "model": "enet",
+          "score": 0.5615525240447501,
+          "params": {
+            "model": "enet",
+            "alpha": 1.2227515943728377e-05,
+            "l1_ratio": 0.9780768138793394,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 49,
+          "model": "rf",
+          "score": 0.6194153580667878,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 6,
+            "min_samples_leaf": 7,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 50,
+          "model": "rf",
+          "score": 0.6225578993891447,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 16,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 51,
+          "model": "rf",
+          "score": 0.6225578993891447,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 16,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 52,
+          "model": "rf",
+          "score": 0.6223810878509576,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 17,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 53,
+          "model": "rf",
+          "score": 0.6225578993891447,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 21,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 54,
+          "model": "rf",
+          "score": 0.6214457419915608,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 22,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 55,
+          "model": "rf",
+          "score": 0.6223810878509576,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 25,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 56,
+          "model": "extra",
+          "score": 0.6086801458161057,
+          "params": {
+            "model": "extra",
+            "n_estimators": 400,
+            "max_depth": 22,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 57,
+          "model": "hgbm",
+          "score": 0.6059693883149416,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.006419588568815613,
+            "max_depth": 9,
+            "max_iter": 400,
+            "l2_regularization": 0.584457419124367,
+            "max_leaf_nodes": 255
+          }
+        },
+        {
+          "number": 58,
+          "model": "rf",
+          "score": 0.6203761843018152,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 21,
+            "min_samples_leaf": 7,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 59,
+          "model": "rf",
+          "score": 0.6213996323056055,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 26,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 60,
+          "model": "lasso",
+          "score": 0.5421199150480828,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0014523663772718597
+          }
+        },
+        {
+          "number": 61,
+          "model": "rf",
+          "score": 0.6225578993891447,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 16,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 62,
+          "model": "rf",
+          "score": 0.6225578993891447,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 16,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 63,
+          "model": "rf",
+          "score": 0.6224764288991793,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 16,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 64,
+          "model": "rf",
+          "score": 0.6223810878509576,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 20,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 65,
+          "model": "enet",
+          "score": 0.5616425206539921,
+          "params": {
+            "model": "enet",
+            "alpha": 7.1036572377489855e-06,
+            "l1_ratio": 0.5857926674877615,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 66,
+          "model": "rf",
+          "score": 0.6224764288991793,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 17,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 67,
+          "model": "ols",
+          "score": 0.5450292013835084,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 68,
+          "model": "rf",
+          "score": 0.6214457419915608,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 18,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 69,
+          "model": "extra",
+          "score": 0.6100326628273212,
+          "params": {
+            "model": "extra",
+            "n_estimators": 800,
+            "max_depth": 16,
+            "min_samples_leaf": 4,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 70,
+          "model": "rf",
+          "score": 0.6224764288991793,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 24,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 71,
+          "model": "rf",
+          "score": 0.622494047726522,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 30,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 72,
+          "model": "rf",
+          "score": 0.6225578993891447,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 30,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 73,
+          "model": "rf",
+          "score": 0.6225578993891447,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 28,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 74,
+          "model": "rf",
+          "score": 0.6223810878509576,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 28,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 75,
+          "model": "ridge",
+          "score": 0.5455773788546798,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.24484442397601325
+          }
+        },
+        {
+          "number": 76,
+          "model": "rf",
+          "score": 0.6225578993891447,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 30,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 77,
+          "model": "rf",
+          "score": 0.6225578993891447,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 28,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 78,
+          "model": "rf",
+          "score": 0.6223810878509576,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 29,
+            "min_samples_leaf": 9,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 79,
+          "model": "lasso",
+          "score": 0.5541445349149725,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0003820864791223947
+          }
+        }
+      ]
+    },
+    "ManagedMoney_LongPosition_to_openinterest_change": {
+      "cpcv_correlation_by_model": {
+        "lasso": 0.23215949298393335,
+        "ridge": 0.3299033486879135,
+        "rf": 0.36857754630889855,
+        "hgbm": 0.2718688020149487,
+        "ols": 0.32990329772883525,
+        "enet": 0.027749223181576792,
+        "extra": 0.3475612311533147
+      },
+      "best_per_model_params": {
+        "lasso": {
+          "score": -0.04884685484488453,
+          "params": {
+            "alpha": 1.156732719914599
+          }
+        },
+        "ridge": {
+          "score": 0.5028491829213357,
+          "params": {
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        "rf": {
+          "score": 0.537772594137764,
+          "params": {
+            "n_estimators": 1000,
+            "max_depth": 3,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        "hgbm": {
+          "score": 0.46376823676987067,
+          "params": {
+            "learning_rate": 0.20317617225236814,
+            "max_depth": 14,
+            "max_iter": 500,
+            "l2_regularization": 0.503080564946794,
+            "max_leaf_nodes": 251
+          }
+        },
+        "ols": {
+          "score": 0.5028490422868478,
+          "params": {}
+        },
+        "enet": {
+          "score": -0.02948487836002491,
+          "params": {
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        "extra": {
+          "score": 0.5343112914923219,
+          "params": {
+            "n_estimators": 1200,
+            "max_depth": 11,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        }
+      },
+      "selected_model": "rf",
+      "selected_model_params": {
+        "n_estimators": 1000,
+        "max_depth": 3,
+        "min_samples_leaf": 10,
+        "max_features": "log2"
+      },
+      "optuna_trial_history": [
+        {
+          "number": 0,
+          "model": "lasso",
+          "score": -0.04884685484488453,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.156732719914599
+          }
+        },
+        {
+          "number": 1,
+          "model": "ridge",
+          "score": 0.5028491829213357,
+          "params": {
+            "model": "ridge",
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        {
+          "number": 2,
+          "model": "rf",
+          "score": 0.546878032026083,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 15,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 3,
+          "model": "hgbm",
+          "score": 0.5192296328856024,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.10057690178153984,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.6842330265121569,
+            "max_leaf_nodes": 121
+          }
+        },
+        {
+          "number": 4,
+          "model": "ridge",
+          "score": 0.5029983368233015,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.047930525507821314
+          }
+        },
+        {
+          "number": 5,
+          "model": "ols",
+          "score": 0.5028490422868478,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 6,
+          "model": "enet",
+          "score": -0.02948487836002491,
+          "params": {
+            "model": "enet",
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        {
+          "number": 7,
+          "model": "ols",
+          "score": 0.5028490422868478,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 8,
+          "model": "hgbm",
+          "score": 0.5371895443306187,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.03499331111708852,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.3109823217156622,
+            "max_leaf_nodes": 93
+          }
+        },
+        {
+          "number": 9,
+          "model": "ols",
+          "score": 0.5028490422868478,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 10,
+          "model": "rf",
+          "score": 0.5468779567027243,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 27,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 11,
+          "model": "rf",
+          "score": 0.5468779567027243,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 30,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 12,
+          "model": "rf",
+          "score": 0.5468779567027243,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 22,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 13,
+          "model": "extra",
+          "score": 0.5378875083558463,
+          "params": {
+            "model": "extra",
+            "n_estimators": 600,
+            "max_depth": 19,
+            "min_samples_leaf": 5,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 14,
+          "model": "rf",
+          "score": 0.5474576546216364,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 15,
+          "model": "rf",
+          "score": 0.5474580445266566,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 12,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 16,
+          "model": "rf",
+          "score": 0.547458353165203,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 17,
+          "model": "enet",
+          "score": 0.518072110022671,
+          "params": {
+            "model": "enet",
+            "alpha": 1.1633263858100045e-06,
+            "l1_ratio": 0.9653379460654555,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 18,
+          "model": "lasso",
+          "score": -0.04884685484488453,
+          "params": {
+            "model": "lasso",
+            "alpha": 9.714586134002047
+          }
+        },
+        {
+          "number": 19,
+          "model": "extra",
+          "score": 0.5343112914923219,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 11,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 20,
+          "model": "rf",
+          "score": 0.537772594137764,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 3,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 21,
+          "model": "rf",
+          "score": 0.5474576546216364,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 22,
+          "model": "rf",
+          "score": 0.5470979024207248,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 11,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 23,
+          "model": "rf",
+          "score": 0.5467324534925998,
+          "params": {
+            "model": "rf",
+            "n_estimators": 200,
+            "max_depth": 19,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 24,
+          "model": "rf",
+          "score": 0.5470058230263499,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 12,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 25,
+          "model": "rf",
+          "score": 0.5446818258819021,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 17,
+            "min_samples_leaf": 6,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 26,
+          "model": "rf",
+          "score": 0.5385807325880562,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 8,
+            "min_samples_leaf": 1,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 27,
+          "model": "enet",
+          "score": 0.5180514942640732,
+          "params": {
+            "model": "enet",
+            "alpha": 7.894103404616828e-05,
+            "l1_ratio": 0.037369388237146195,
+            "loss": "huber",
+            "epsilon": 0.19255826811040527
+          }
+        },
+        {
+          "number": 28,
+          "model": "ridge",
+          "score": 0.5124165213206531,
+          "params": {
+            "model": "ridge",
+            "alpha": 442.5093801422389
+          }
+        },
+        {
+          "number": 29,
+          "model": "lasso",
+          "score": 0.5123604786283057,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0007305754446019548
+          }
+        },
+        {
+          "number": 30,
+          "model": "extra",
+          "score": 0.5389589917859097,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 6,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 31,
+          "model": "rf",
+          "score": 0.5474576546216364,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 32,
+          "model": "rf",
+          "score": 0.5474216348072293,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 33,
+          "model": "rf",
+          "score": 0.546927312880691,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 9,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 34,
+          "model": "hgbm",
+          "score": 0.5410427088247497,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.002743023307727101,
+            "max_depth": 13,
+            "max_iter": 1000,
+            "l2_regularization": 0.054917552055816055,
+            "max_leaf_nodes": 255
+          }
+        },
+        {
+          "number": 35,
+          "model": "rf",
+          "score": 0.5474576546216364,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 36,
+          "model": "ridge",
+          "score": 0.5054698159829735,
+          "params": {
+            "model": "ridge",
+            "alpha": 906.6118860721004
+          }
+        },
+        {
+          "number": 37,
+          "model": "lasso",
+          "score": 0.5032611388486763,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.261122987665929e-06
+          }
+        },
+        {
+          "number": 38,
+          "model": "rf",
+          "score": 0.5469710302117693,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 16,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 39,
+          "model": "hgbm",
+          "score": 0.5410049642150351,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0011976520841200263,
+            "max_depth": 12,
+            "max_iter": 800,
+            "l2_regularization": 0.9664981016783335,
+            "max_leaf_nodes": 21
+          }
+        },
+        {
+          "number": 40,
+          "model": "ols",
+          "score": 0.5028490422868478,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 41,
+          "model": "rf",
+          "score": 0.5474576546216364,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 42,
+          "model": "rf",
+          "score": 0.547451299112056,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 10,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 43,
+          "model": "rf",
+          "score": 0.5474211918829283,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 44,
+          "model": "rf",
+          "score": 0.5471004583688079,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 22,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 45,
+          "model": "rf",
+          "score": 0.5474214118899794,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 21,
+            "min_samples_leaf": 9,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 46,
+          "model": "enet",
+          "score": 0.5179806028408264,
+          "params": {
+            "model": "enet",
+            "alpha": 1.0191349226350149e-05,
+            "l1_ratio": 0.9914173791995448,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 47,
+          "model": "ridge",
+          "score": 0.5150508500551204,
+          "params": {
+            "model": "ridge",
+            "alpha": 13.831088291814737
+          }
+        },
+        {
+          "number": 48,
+          "model": "ols",
+          "score": 0.5028490422868478,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 49,
+          "model": "rf",
+          "score": 0.5447870417252081,
+          "params": {
+            "model": "rf",
+            "n_estimators": 800,
+            "max_depth": 16,
+            "min_samples_leaf": 7,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 50,
+          "model": "extra",
+          "score": 0.5398870635144609,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 51,
+          "model": "rf",
+          "score": 0.5474576546216364,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 52,
+          "model": "rf",
+          "score": 0.5474211918829283,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 53,
+          "model": "rf",
+          "score": 0.5474576546216364,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 17,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 54,
+          "model": "rf",
+          "score": 0.5462014555568876,
+          "params": {
+            "model": "rf",
+            "n_estimators": 200,
+            "max_depth": 14,
+            "min_samples_leaf": 9,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 55,
+          "model": "rf",
+          "score": 0.5471004583688079,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 20,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 56,
+          "model": "hgbm",
+          "score": 0.46376823676987067,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.20317617225236814,
+            "max_depth": 14,
+            "max_iter": 500,
+            "l2_regularization": 0.503080564946794,
+            "max_leaf_nodes": 251
+          }
+        },
+        {
+          "number": 57,
+          "model": "rf",
+          "score": 0.5475888876710295,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 25,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 58,
+          "model": "lasso",
+          "score": 0.4593757884554947,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.002785993459385819
+          }
+        },
+        {
+          "number": 59,
+          "model": "rf",
+          "score": 0.5454036934266955,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 26,
+            "min_samples_leaf": 7,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 60,
+          "model": "enet",
+          "score": 0.5180379480509466,
+          "params": {
+            "model": "enet",
+            "alpha": 8.401276915097045e-06,
+            "l1_ratio": 0.502306324418736,
+            "loss": "huber",
+            "epsilon": 0.13787813405129054
+          }
+        },
+        {
+          "number": 61,
+          "model": "rf",
+          "score": 0.5475888876710296,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 25,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 62,
+          "model": "rf",
+          "score": 0.5475888876710296,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 24,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 63,
+          "model": "rf",
+          "score": 0.5475888876710296,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 25,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 64,
+          "model": "rf",
+          "score": 0.5454036934266955,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 26,
+            "min_samples_leaf": 7,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 65,
+          "model": "rf",
+          "score": 0.5475888876710296,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 28,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 66,
+          "model": "rf",
+          "score": 0.5475888876710296,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 24,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 67,
+          "model": "ols",
+          "score": 0.5028490422868478,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 68,
+          "model": "rf",
+          "score": 0.5475888876710296,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 24,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 69,
+          "model": "rf",
+          "score": 0.5475888876710296,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 29,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 70,
+          "model": "extra",
+          "score": 0.541162710243379,
+          "params": {
+            "model": "extra",
+            "n_estimators": 400,
+            "max_depth": 30,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 71,
+          "model": "rf",
+          "score": 0.5475888876710298,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 24,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 72,
+          "model": "rf",
+          "score": 0.5475888876710296,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 24,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 73,
+          "model": "rf",
+          "score": 0.5475888876710295,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 28,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 74,
+          "model": "rf",
+          "score": 0.5451509308408542,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 24,
+            "min_samples_leaf": 7,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 75,
+          "model": "rf",
+          "score": 0.5475888876710298,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 28,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 76,
+          "model": "ridge",
+          "score": 0.5033832828293505,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.17571676048538484
+          }
+        },
+        {
+          "number": 77,
+          "model": "rf",
+          "score": 0.5447826245892282,
+          "params": {
+            "model": "rf",
+            "n_estimators": 200,
+            "max_depth": 23,
+            "min_samples_leaf": 7,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 78,
+          "model": "rf",
+          "score": 0.5475888876710298,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 27,
+            "min_samples_leaf": 8,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 79,
+          "model": "lasso",
+          "score": 0.5133039871322327,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0005306068720845408
+          }
+        }
+      ]
+    },
+    "ManagedMoney_ShortPosition_to_openinterest_change": {
+      "cpcv_correlation_by_model": {
+        "lasso": 0.1201042445723097,
+        "ridge": 0.3312263849627324,
+        "rf": 0.4152708925028459,
+        "hgbm": 0.3908488480505516,
+        "ols": 0.3312263812966312,
+        "enet": 0.023147313069097442,
+        "extra": 0.41254248258822135
+      },
+      "best_per_model_params": {
+        "lasso": {
+          "score": -0.04913346405670561,
+          "params": {
+            "alpha": 1.156732719914599
+          }
+        },
+        "ridge": {
+          "score": 0.3312264259970034,
+          "params": {
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        "rf": {
+          "score": 0.41631213189815625,
+          "params": {
+            "n_estimators": 400,
+            "max_depth": 14,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+          }
+        },
+        "hgbm": {
+          "score": 0.3908488480505516,
+          "params": {
+            "learning_rate": 0.0041555995699848755,
+            "max_depth": 3,
+            "max_iter": 100,
+            "l2_regularization": 0.024447042100329552,
+            "max_leaf_nodes": 24
+          }
+        },
+        "ols": {
+          "score": 0.33122638129665444,
+          "params": {}
+        },
+        "enet": {
+          "score": -0.04656222937126951,
+          "params": {
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        "extra": {
+          "score": 0.4130774774321611,
+          "params": {
+            "n_estimators": 1200,
+            "max_depth": 28,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+          }
+        }
+      },
+      "selected_model": "rf",
+      "selected_model_params": {
+        "n_estimators": 400,
+        "max_depth": 14,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt"
+      },
+      "optuna_trial_history": [
+        {
+          "number": 0,
+          "model": "lasso",
+          "score": -0.04913346405670561,
+          "params": {
+            "model": "lasso",
+            "alpha": 1.156732719914599
+          }
+        },
+        {
+          "number": 1,
+          "model": "ridge",
+          "score": 0.3312264259970034,
+          "params": {
+            "model": "ridge",
+            "alpha": 4.473429410462694e-05
+          }
+        },
+        {
+          "number": 2,
+          "model": "rf",
+          "score": 0.42524810169336125,
+          "params": {
+            "model": "rf",
+            "n_estimators": 600,
+            "max_depth": 15,
+            "min_samples_leaf": 8,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 3,
+          "model": "hgbm",
+          "score": 0.42668589390590483,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.10057690178153984,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.6842330265121569,
+            "max_leaf_nodes": 121
+          }
+        },
+        {
+          "number": 4,
+          "model": "ridge",
+          "score": 0.3312733459354065,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.047930525507821314
+          }
+        },
+        {
+          "number": 5,
+          "model": "ols",
+          "score": 0.33122638129665444,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 6,
+          "model": "enet",
+          "score": -0.04656222937126951,
+          "params": {
+            "model": "enet",
+            "alpha": 0.013921548533046502,
+            "l1_ratio": 0.3567533266935893,
+            "loss": "huber",
+            "epsilon": 0.029043920769977766
+          }
+        },
+        {
+          "number": 7,
+          "model": "ols",
+          "score": 0.33122638129665444,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 8,
+          "model": "hgbm",
+          "score": 0.4290087446448729,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.03499331111708852,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.3109823217156622,
+            "max_leaf_nodes": 93
+          }
+        },
+        {
+          "number": 9,
+          "model": "ols",
+          "score": 0.33122638129665444,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 10,
+          "model": "hgbm",
+          "score": 0.3908488480505516,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0041555995699848755,
+            "max_depth": 3,
+            "max_iter": 100,
+            "l2_regularization": 0.024447042100329552,
+            "max_leaf_nodes": 24
+          }
+        },
+        {
+          "number": 11,
+          "model": "hgbm",
+          "score": 0.422692990378326,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.12935629612228897,
+            "max_depth": 7,
+            "max_iter": 100,
+            "l2_regularization": 0.7164436834312206,
+            "max_leaf_nodes": 130
+          }
+        },
+        {
+          "number": 12,
+          "model": "hgbm",
+          "score": 0.4129310138215848,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0862165380753941,
+            "max_depth": 8,
+            "max_iter": 300,
+            "l2_regularization": 0.3807519773649055,
+            "max_leaf_nodes": 119
+          }
+        },
+        {
+          "number": 13,
+          "model": "extra",
+          "score": 0.4130774774321611,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 28,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 14,
+          "model": "hgbm",
+          "score": 0.4252986847755803,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0217122302583139,
+            "max_depth": 5,
+            "max_iter": 800,
+            "l2_regularization": 0.4415535572778486,
+            "max_leaf_nodes": 93
+          }
+        },
+        {
+          "number": 15,
+          "model": "hgbm",
+          "score": 0.42397044707280934,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.02500419942003696,
+            "max_depth": 12,
+            "max_iter": 500,
+            "l2_regularization": 0.9928429455001784,
+            "max_leaf_nodes": 235
+          }
+        },
+        {
+          "number": 16,
+          "model": "rf",
+          "score": 0.42543840481821626,
+          "params": {
+            "model": "rf",
+            "n_estimators": 200,
+            "max_depth": 24,
+            "min_samples_leaf": 10,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 17,
+          "model": "extra",
+          "score": 0.43017930618272215,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 19,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 18,
+          "model": "extra",
+          "score": 0.43018772361387797,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 20,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 19,
+          "model": "extra",
+          "score": 0.43013200763760756,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 21,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 20,
+          "model": "extra",
+          "score": 0.4288657145413494,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 20,
+            "min_samples_leaf": 4,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 21,
+          "model": "extra",
+          "score": 0.43018772361387797,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 20,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 22,
+          "model": "extra",
+          "score": 0.43051610627153164,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 23,
+          "model": "extra",
+          "score": 0.42768975418793875,
+          "params": {
+            "model": "extra",
+            "n_estimators": 800,
+            "max_depth": 15,
+            "min_samples_leaf": 5,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 24,
+          "model": "extra",
+          "score": 0.41371755889339396,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 24,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 25,
+          "model": "extra",
+          "score": 0.4306383178721351,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 17,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 26,
+          "model": "enet",
+          "score": 0.3329622981392866,
+          "params": {
+            "model": "enet",
+            "alpha": 1.174619747388294e-06,
+            "l1_ratio": 0.9606580534597144,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 27,
+          "model": "lasso",
+          "score": -0.04913346405670561,
+          "params": {
+            "model": "lasso",
+            "alpha": 4.822995401403517
+          }
+        },
+        {
+          "number": 28,
+          "model": "extra",
+          "score": 0.42450987774922194,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 12,
+            "min_samples_leaf": 6,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 29,
+          "model": "lasso",
+          "score": 0.33644390077414016,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0001367790897405972
+          }
+        },
+        {
+          "number": 30,
+          "model": "extra",
+          "score": 0.42820998519696457,
+          "params": {
+            "model": "extra",
+            "n_estimators": 800,
+            "max_depth": 17,
+            "min_samples_leaf": 2,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 31,
+          "model": "extra",
+          "score": 0.4301957730955226,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 23,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 32,
+          "model": "extra",
+          "score": 0.4285299389685045,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 23,
+            "min_samples_leaf": 4,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 33,
+          "model": "ridge",
+          "score": 0.34150158150345317,
+          "params": {
+            "model": "ridge",
+            "alpha": 202.10282937157893
+          }
+        },
+        {
+          "number": 34,
+          "model": "extra",
+          "score": 0.42841620483031434,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 28,
+            "min_samples_leaf": 2,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 35,
+          "model": "rf",
+          "score": 0.4264491504075178,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1200,
+            "max_depth": 17,
+            "min_samples_leaf": 5,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 36,
+          "model": "extra",
+          "score": 0.4287935175284142,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 26,
+            "min_samples_leaf": 4,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 37,
+          "model": "ridge",
+          "score": 0.34320006804925496,
+          "params": {
+            "model": "ridge",
+            "alpha": 334.17207377910296
+          }
+        },
+        {
+          "number": 38,
+          "model": "enet",
+          "score": 0.33290824852640905,
+          "params": {
+            "model": "enet",
+            "alpha": 1.8056808194224798e-06,
+            "l1_ratio": 0.04420583478650164,
+            "loss": "squared_error"
+          }
+        },
+        {
+          "number": 39,
+          "model": "extra",
+          "score": 0.42863858406177263,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 22,
+            "min_samples_leaf": 2,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 40,
+          "model": "lasso",
+          "score": 0.3234254642533587,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.000864800028793422
+          }
+        },
+        {
+          "number": 41,
+          "model": "extra",
+          "score": 0.43017930618272215,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 19,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 42,
+          "model": "extra",
+          "score": 0.43017930618272215,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 19,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 43,
+          "model": "ols",
+          "score": 0.33122638129665444,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 44,
+          "model": "extra",
+          "score": 0.429039015003794,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 15,
+            "min_samples_leaf": 4,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 45,
+          "model": "extra",
+          "score": 0.42894239362149805,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 21,
+            "min_samples_leaf": 2,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 46,
+          "model": "rf",
+          "score": 0.4228545860584118,
+          "params": {
+            "model": "rf",
+            "n_estimators": 1000,
+            "max_depth": 17,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 47,
+          "model": "extra",
+          "score": 0.42415616862035965,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 13,
+            "min_samples_leaf": 6,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 48,
+          "model": "ols",
+          "score": 0.33122638129665444,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 49,
+          "model": "ridge",
+          "score": 0.33335265195533176,
+          "params": {
+            "model": "ridge",
+            "alpha": 6.627049303128476
+          }
+        },
+        {
+          "number": 50,
+          "model": "extra",
+          "score": 0.4287824566976215,
+          "params": {
+            "model": "extra",
+            "n_estimators": 800,
+            "max_depth": 25,
+            "min_samples_leaf": 4,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 51,
+          "model": "extra",
+          "score": 0.43017930618272215,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 19,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 52,
+          "model": "extra",
+          "score": 0.4305161062715315,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 53,
+          "model": "extra",
+          "score": 0.42863858406177263,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 22,
+            "min_samples_leaf": 2,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 54,
+          "model": "extra",
+          "score": 0.4307598826121043,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 16,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 55,
+          "model": "enet",
+          "score": 0.33344252482142606,
+          "params": {
+            "model": "enet",
+            "alpha": 1.2460104602445464e-05,
+            "l1_ratio": 0.9951293679727775,
+            "loss": "huber",
+            "epsilon": 0.19989291620030147
+          }
+        },
+        {
+          "number": 56,
+          "model": "extra",
+          "score": 0.42748454101416344,
+          "params": {
+            "model": "extra",
+            "n_estimators": 600,
+            "max_depth": 16,
+            "min_samples_leaf": 2,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 57,
+          "model": "extra",
+          "score": 0.42723608551720527,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 13,
+            "min_samples_leaf": 5,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 58,
+          "model": "extra",
+          "score": 0.42767034510885993,
+          "params": {
+            "model": "extra",
+            "n_estimators": 200,
+            "max_depth": 18,
+            "min_samples_leaf": 4,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 59,
+          "model": "rf",
+          "score": 0.41631213189815625,
+          "params": {
+            "model": "rf",
+            "n_estimators": 400,
+            "max_depth": 14,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 60,
+          "model": "extra",
+          "score": 0.41645988631522596,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 16,
+            "min_samples_leaf": 9,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 61,
+          "model": "extra",
+          "score": 0.43013200763760756,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 21,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 62,
+          "model": "extra",
+          "score": 0.43051610627153153,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 63,
+          "model": "extra",
+          "score": 0.4305161062715315,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 64,
+          "model": "hgbm",
+          "score": 0.4159397344513341,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.0016022032835290299,
+            "max_depth": 10,
+            "max_iter": 1000,
+            "l2_regularization": 0.02589621624957794,
+            "max_leaf_nodes": 253
+          }
+        },
+        {
+          "number": 65,
+          "model": "extra",
+          "score": 0.4303863168524253,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 17,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 66,
+          "model": "lasso",
+          "score": 0.2786772057963722,
+          "params": {
+            "model": "lasso",
+            "alpha": 0.0019447203894038193
+          }
+        },
+        {
+          "number": 67,
+          "model": "extra",
+          "score": 0.428667662297285,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 18,
+            "min_samples_leaf": 4,
+            "max_features": "log2"
+          }
+        },
+        {
+          "number": 68,
+          "model": "ols",
+          "score": 0.33122638129665444,
+          "params": {
+            "model": "ols"
+          }
+        },
+        {
+          "number": 69,
+          "model": "extra",
+          "score": 0.4288017277369363,
+          "params": {
+            "model": "extra",
+            "n_estimators": 800,
+            "max_depth": 18,
+            "min_samples_leaf": 2,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 70,
+          "model": "extra",
+          "score": 0.43043443964124467,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 71,
+          "model": "extra",
+          "score": 0.43043443964124467,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 72,
+          "model": "extra",
+          "score": 0.43043443964124467,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 15,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 73,
+          "model": "extra",
+          "score": 0.4288816315325055,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1000,
+            "max_depth": 14,
+            "min_samples_leaf": 4,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 74,
+          "model": "extra",
+          "score": 0.4304110868230697,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 16,
+            "min_samples_leaf": 3,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 75,
+          "model": "enet",
+          "score": 0.3331413544335402,
+          "params": {
+            "model": "enet",
+            "alpha": 8.829566998148952e-06,
+            "l1_ratio": 0.5753939497934586,
+            "loss": "huber",
+            "epsilon": 0.15254132012340854
+          }
+        },
+        {
+          "number": 76,
+          "model": "ridge",
+          "score": 0.33143111228073324,
+          "params": {
+            "model": "ridge",
+            "alpha": 0.22362623701619402
+          }
+        },
+        {
+          "number": 77,
+          "model": "extra",
+          "score": 0.4287592525336864,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 14,
+            "min_samples_leaf": 2,
+            "max_features": "sqrt"
+          }
+        },
+        {
+          "number": 78,
+          "model": "hgbm",
+          "score": 0.42989570667342175,
+          "params": {
+            "model": "hgbm",
+            "learning_rate": 0.005279731904249474,
+            "max_depth": 15,
+            "max_iter": 700,
+            "l2_regularization": 0.9830832217289698,
+            "max_leaf_nodes": 192
+          }
+        },
+        {
+          "number": 79,
+          "model": "extra",
+          "score": 0.42246100999781233,
+          "params": {
+            "model": "extra",
+            "n_estimators": 1200,
+            "max_depth": 11,
+            "min_samples_leaf": 1,
+            "max_features": "sqrt"
+          }
+        }
+      ]
+    }
+  }
+}
