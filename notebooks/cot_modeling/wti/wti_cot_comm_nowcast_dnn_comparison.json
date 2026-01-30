@@ -1,0 +1,58 @@
+{
+  "dnn_2L_32_16": {
+    "Commercial_NetPosition_to_openinterest_change": null,
+    "CommercialLongPosition_to_openinterest_change": 0.1717,
+    "CommercialShortPosition_to_openinterest_change": null,
+    "Commercial_NetPosition_change": 0.0751,
+    "CommercialLongPosition_change": 0.6762,
+    "CommercialShortPosition_change": 0.6715
+  },
+  "dnn_3L_32_24_16": {
+    "Commercial_NetPosition_to_openinterest_change": null,
+    "CommercialLongPosition_to_openinterest_change": 0.1953,
+    "CommercialShortPosition_to_openinterest_change": null,
+    "Commercial_NetPosition_change": 0.0812,
+    "CommercialLongPosition_change": 0.6776,
+    "CommercialShortPosition_change": 0.6754
+  },
+  "dnn_4L_48_32_24_16": {
+    "Commercial_NetPosition_to_openinterest_change": null,
+    "CommercialLongPosition_to_openinterest_change": 0.1874,
+    "CommercialShortPosition_to_openinterest_change": null,
+    "Commercial_NetPosition_change": 0.0626,
+    "CommercialLongPosition_change": 0.6771,
+    "CommercialShortPosition_change": 0.6728
+  },
+  "ols": {
+    "Commercial_NetPosition_to_openinterest_change": 0.1595,
+    "CommercialLongPosition_to_openinterest_change": 0.1198,
+    "CommercialShortPosition_to_openinterest_change": 0.1146,
+    "Commercial_NetPosition_change": 0.1201,
+    "CommercialLongPosition_change": 0.6851,
+    "CommercialShortPosition_change": 0.6843
+  },
+  "ridge": {
+    "Commercial_NetPosition_to_openinterest_change": 0.1595,
+    "CommercialLongPosition_to_openinterest_change": 0.1198,
+    "CommercialShortPosition_to_openinterest_change": 0.1146,
+    "Commercial_NetPosition_change": 0.1201,
+    "CommercialLongPosition_change": 0.6851,
+    "CommercialShortPosition_change": 0.6843
+  },
+  "rf": {
+    "Commercial_NetPosition_to_openinterest_change": 0.0771,
+    "CommercialLongPosition_to_openinterest_change": 0.1965,
+    "CommercialShortPosition_to_openinterest_change": 0.1098,
+    "Commercial_NetPosition_change": 0.0708,
+    "CommercialLongPosition_change": 0.6657,
+    "CommercialShortPosition_change": 0.6555
+  },
+  "extra": {
+    "Commercial_NetPosition_to_openinterest_change": 0.0571,
+    "CommercialLongPosition_to_openinterest_change": 0.2006,
+    "CommercialShortPosition_to_openinterest_change": 0.1352,
+    "Commercial_NetPosition_change": 0.0292,
+    "CommercialLongPosition_change": 0.6685,
+    "CommercialShortPosition_change": 0.6529
+  }
+}
