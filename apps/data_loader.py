@@ -31,10 +31,9 @@ class AppData:
         self.forecast_correlations = _load_json(fc / "01_feature_response_correlations.json")
         self.forecast_selection_details = _load_json(fc / "02_feature_selection_details.json")
         self.forecast_selected_features = _load_json(fc / "02_selected_features_by_response.json")
-        # Forecast has no model selection / SHAP yet
-        self.forecast_cv_scores = None
-        self.forecast_selected_models = None
-        self.forecast_shap = None
+        self.forecast_cv_scores = _load_json(fc / "03_model_selection_cv_scores.json")
+        self.forecast_selected_models = _load_json(fc / "03_selected_model_by_response.json")
+        self.forecast_shap = _load_json(fc / "04_shap_values.json")
 
         # Dataset
         self.dataset = pd.read_csv(DATASET_PATH, parse_dates=["tradeDate"])
