@@ -49,7 +49,12 @@ def make_layout(app_data):
                 ),
             ], width=3),
         ]),
-        dcc.Graph(id="features-heatmap", style={"height": "600px"}),
+        dbc.Row([
+            dbc.Col(
+                dcc.Graph(id="features-heatmap", style={"height": "600px"}),
+                width=7,
+            ),
+        ]),
 
         # --- Binned Scatter Plot section ---
         html.Hr(),
@@ -90,7 +95,12 @@ def make_layout(app_data):
                 ),
             ], width=2),
         ]),
-        dcc.Graph(id="scatter-plot", style={"height": "500px"}),
+        dbc.Row([
+            dbc.Col(
+                dcc.Graph(id="scatter-plot", style={"height": "550px"}),
+                width=7,
+            ),
+        ]),
     ], fluid=True, className="mt-3")
     return layout
 
@@ -231,6 +241,7 @@ def register_callbacks(app, app_data):
             title=title,
             xaxis_title=feature,
             yaxis_title=response,
+            yaxis=dict(scaleanchor="x", scaleratio=1),
             margin=dict(l=80),
             showlegend=True,
             legend=dict(x=0.01, y=0.99),
