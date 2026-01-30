@@ -34,6 +34,7 @@ app = dash.Dash(
     suppress_callback_exceptions=True,
 )
 app.title = "WTI / MM — COT Dashboard"
+server = app.server  # expose Flask server for gunicorn
 
 app.layout = dbc.Container([
     html.H2("WTI Managed Money — COT Analysis Dashboard", className="mt-3 mb-3"),
