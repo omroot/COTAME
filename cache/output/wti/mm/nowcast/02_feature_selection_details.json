@@ -29,11 +29,10 @@
       "number_of_feature_clusters": 6,
       "feature_clusters": {
         "C_0": [
-          "prior_cumulative_5D_F1_Volume_change",
-          "prior_cumulative_5D_F1MinusF2_Volume_change",
-          "prior_5D_F1_OI_change",
-          "prior_5D_AGG_OI_change",
-          "prior_5D_F1MinusF2_openinterest_change"
+          "prior_report_ManagedMoney_NetPosition_change",
+          "prior_report_ManagedMoney_LongPosition_change",
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
         ],
         "C_1": [
           "F1_RolledPrice_rolling_20D_volatility",
@@ -46,48 +45,127 @@
           "F3_RolledPrice_change"
         ],
         "C_3": [
-          "prior_report_ManagedMoney_NetPosition_change",
-          "prior_report_ManagedMoney_LongPosition_change",
-          "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
-          "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
-        ],
-        "C_4": [
           "prior_report_SyntheticF1MinusF2_RolledPrice_change",
           "prior_cumulative_5D_F2_Volume_change",
           "prior_5D_F2_OI_change"
+        ],
+        "C_4": [
+          "prior_cumulative_5D_F1_Volume_change",
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_F1_OI_change",
+          "prior_5D_AGG_OI_change",
+          "prior_5D_F1MinusF2_openinterest_change"
         ],
         "C_5": [
           "prior_report_ManagedMoney_ShortPosition_change",
           "prior_report_ManagedMoney_ShortPosition_to_openinterest_change"
         ]
       },
+      "cluster_mda": {
+        "C_0": {
+          "mean": 0.007841407136252065,
+          "std": 0.011494422622833818
+        },
+        "C_1": {
+          "mean": 0.005896625032219849,
+          "std": 0.006156846439788365
+        },
+        "C_2": {
+          "mean": 0.476382565097272,
+          "std": 0.07333004428501085
+        },
+        "C_3": {
+          "mean": 0.007734851064122939,
+          "std": 0.009293839109170376
+        },
+        "C_4": {
+          "mean": 0.02821630318234276,
+          "std": 0.006081759575429937
+        },
+        "C_5": {
+          "mean": 0.0029128838906032463,
+          "std": 0.005554969060938442
+        }
+      },
       "selected_cluster_names": [
         "C_0",
-        "C_3",
+        "C_4",
         "C_2"
       ],
       "purged_feature_clusters": {
         "C_0": [
-          "prior_cumulative_5D_F1MinusF2_Volume_change",
-          "prior_5D_F1_OI_change",
-          "prior_5D_AGG_OI_change"
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change"
         ],
-        "C_3": [
-          "prior_report_ManagedMoney_NetPosition_change",
-          "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
+        "C_4": [
+          "prior_5D_F1_OI_change",
+          "prior_5D_AGG_OI_change",
+          "prior_cumulative_5D_F1MinusF2_Volume_change"
         ],
         "C_2": [
-          "F2_RolledPrice_change",
           "F3_RolledPrice_change"
         ]
       },
+      "feature_sfi": {
+        "C_0": {
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change": {
+            "mean": 0.10924700199978679,
+            "std": 0.0381382264316464
+          },
+          "prior_report_ManagedMoney_NetPosition_change": {
+            "mean": 0.10737204479512422,
+            "std": 0.041774270070667266
+          },
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change": {
+            "mean": 0.09962272803871927,
+            "std": 0.05911297082965955
+          },
+          "prior_report_ManagedMoney_LongPosition_change": {
+            "mean": 0.08697042740818513,
+            "std": 0.04524037290058004
+          }
+        },
+        "C_4": {
+          "prior_5D_F1_OI_change": {
+            "mean": 0.12691278256216923,
+            "std": 0.04619759389229098
+          },
+          "prior_5D_AGG_OI_change": {
+            "mean": 0.027942995763954252,
+            "std": 0.04828817967432264
+          },
+          "prior_cumulative_5D_F1MinusF2_Volume_change": {
+            "mean": 0.024879999196260598,
+            "std": 0.034156561568616836
+          },
+          "prior_5D_F1MinusF2_openinterest_change": {
+            "mean": -0.027392923951630416,
+            "std": 0.003542347306768924
+          },
+          "prior_cumulative_5D_F1_Volume_change": {
+            "mean": -0.038575482060004856,
+            "std": 0.03484732821568868
+          }
+        },
+        "C_2": {
+          "F3_RolledPrice_change": {
+            "mean": 0.51225640076908,
+            "std": 0.05597245171021175
+          },
+          "F2_RolledPrice_change": {
+            "mean": 0.5054697313975431,
+            "std": 0.06074778318835547
+          },
+          "F1_RolledPrice_change": {
+            "mean": 0.500958044380089,
+            "std": 0.06971649206993431
+          }
+        }
+      },
       "selected_features": [
-        "prior_cumulative_5D_F1MinusF2_Volume_change",
+        "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
         "prior_5D_F1_OI_change",
         "prior_5D_AGG_OI_change",
-        "prior_report_ManagedMoney_NetPosition_change",
-        "prior_report_ManagedMoney_LongPosition_to_openinterest_change",
-        "F2_RolledPrice_change",
+        "prior_cumulative_5D_F1MinusF2_Volume_change",
         "F3_RolledPrice_change"
       ]
     },
@@ -95,80 +173,156 @@
       "number_of_feature_clusters": 6,
       "feature_clusters": {
         "C_0": [
+          "prior_report_ManagedMoney_ShortPosition_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change"
+        ],
+        "C_1": [
           "prior_report_ManagedMoney_NetPosition_change",
           "prior_report_ManagedMoney_LongPosition_change",
           "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
           "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
         ],
-        "C_1": [
+        "C_2": [
           "prior_report_SyntheticF1MinusF2_RolledPrice_change",
           "prior_cumulative_5D_F2_Volume_change",
           "prior_5D_F2_OI_change"
         ],
-        "C_2": [
-          "F1_RolledPrice_change",
-          "F2_RolledPrice_change",
-          "F3_RolledPrice_change"
-        ],
         "C_3": [
-          "F1_RolledPrice_rolling_20D_volatility",
-          "F2_RolledPrice_rolling_20D_volatility",
-          "F3_RolledPrice_rolling_20D_volatility"
-        ],
-        "C_4": [
           "prior_cumulative_5D_F1_Volume_change",
           "prior_cumulative_5D_F1MinusF2_Volume_change",
           "prior_5D_F1_OI_change",
           "prior_5D_AGG_OI_change",
           "prior_5D_F1MinusF2_openinterest_change"
         ],
+        "C_4": [
+          "F1_RolledPrice_change",
+          "F2_RolledPrice_change",
+          "F3_RolledPrice_change"
+        ],
         "C_5": [
-          "prior_report_ManagedMoney_ShortPosition_change",
-          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change"
+          "F1_RolledPrice_rolling_20D_volatility",
+          "F2_RolledPrice_rolling_20D_volatility",
+          "F3_RolledPrice_rolling_20D_volatility"
         ]
+      },
+      "cluster_mda": {
+        "C_0": {
+          "mean": 0.009295531370890963,
+          "std": 0.008007447766362571
+        },
+        "C_1": {
+          "mean": -0.011780851033652085,
+          "std": 0.009761200008991222
+        },
+        "C_2": {
+          "mean": -0.005816686272435562,
+          "std": 0.02002446800345939
+        },
+        "C_3": {
+          "mean": 0.11074153206611011,
+          "std": 0.02462537261767127
+        },
+        "C_4": {
+          "mean": 0.2261034177224622,
+          "std": 0.06785410768744143
+        },
+        "C_5": {
+          "mean": 0.016660035175182258,
+          "std": 0.007037484890050333
+        }
       },
       "selected_cluster_names": [
         "C_5",
-        "C_4",
-        "C_2"
+        "C_3",
+        "C_4"
       ],
       "purged_feature_clusters": {
         "C_5": [
-          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change"
+          "F3_RolledPrice_rolling_20D_volatility"
+        ],
+        "C_3": [
+          "prior_5D_AGG_OI_change",
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_F1_OI_change"
         ],
         "C_4": [
-          "prior_cumulative_5D_F1MinusF2_Volume_change",
-          "prior_5D_F1_OI_change",
-          "prior_5D_AGG_OI_change"
-        ],
-        "C_2": [
-          "F2_RolledPrice_change",
-          "F3_RolledPrice_change"
+          "F2_RolledPrice_change"
         ]
       },
+      "feature_sfi": {
+        "C_5": {
+          "F3_RolledPrice_rolling_20D_volatility": {
+            "mean": 0.07257209322761332,
+            "std": 0.02099397201934782
+          },
+          "F2_RolledPrice_rolling_20D_volatility": {
+            "mean": 0.017234654469457305,
+            "std": 0.03701649674867273
+          },
+          "F1_RolledPrice_rolling_20D_volatility": {
+            "mean": -0.012787193906240849,
+            "std": 0.022006056860335303
+          }
+        },
+        "C_3": {
+          "prior_5D_AGG_OI_change": {
+            "mean": 0.24920490568441442,
+            "std": 0.03356817605276484
+          },
+          "prior_cumulative_5D_F1MinusF2_Volume_change": {
+            "mean": 0.03178604018593967,
+            "std": 0.03582541018221609
+          },
+          "prior_5D_F1_OI_change": {
+            "mean": 0.02789803665948152,
+            "std": 0.0367424459137094
+          },
+          "prior_5D_F1MinusF2_openinterest_change": {
+            "mean": 0.0019488439058439454,
+            "std": 0.011520855163253426
+          },
+          "prior_cumulative_5D_F1_Volume_change": {
+            "mean": -0.025613190128438306,
+            "std": 0.0401557426214044
+          }
+        },
+        "C_4": {
+          "F2_RolledPrice_change": {
+            "mean": 0.2950283752096278,
+            "std": 0.07419156207927163
+          },
+          "F3_RolledPrice_change": {
+            "mean": 0.28121916518621404,
+            "std": 0.08838249294352335
+          },
+          "F1_RolledPrice_change": {
+            "mean": 0.2805399463542786,
+            "std": 0.0772702959573241
+          }
+        }
+      },
       "selected_features": [
-        "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
+        "F3_RolledPrice_rolling_20D_volatility",
+        "prior_5D_AGG_OI_change",
         "prior_cumulative_5D_F1MinusF2_Volume_change",
         "prior_5D_F1_OI_change",
-        "prior_5D_AGG_OI_change",
-        "F2_RolledPrice_change",
-        "F3_RolledPrice_change"
+        "F2_RolledPrice_change"
       ]
     },
     "ManagedMoney_ShortPosition_change": {
       "number_of_feature_clusters": 6,
       "feature_clusters": {
         "C_0": [
+          "F1_RolledPrice_change",
+          "F2_RolledPrice_change",
+          "F3_RolledPrice_change"
+        ],
+        "C_1": [
           "prior_cumulative_5D_F1_Volume_change",
           "prior_cumulative_5D_F1MinusF2_Volume_change",
           "prior_5D_F1_OI_change",
           "prior_5D_AGG_OI_change",
           "prior_5D_F1MinusF2_openinterest_change"
-        ],
-        "C_1": [
-          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
-          "prior_cumulative_5D_F2_Volume_change",
-          "prior_5D_F2_OI_change"
         ],
         "C_2": [
           "prior_report_ManagedMoney_NetPosition_change",
@@ -182,52 +336,130 @@
           "F3_RolledPrice_rolling_20D_volatility"
         ],
         "C_4": [
-          "F1_RolledPrice_change",
-          "F2_RolledPrice_change",
-          "F3_RolledPrice_change"
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change"
         ],
         "C_5": [
           "prior_report_ManagedMoney_ShortPosition_change",
           "prior_report_ManagedMoney_ShortPosition_to_openinterest_change"
         ]
       },
+      "cluster_mda": {
+        "C_0": {
+          "mean": 0.21354834838270023,
+          "std": 0.05406942178976625
+        },
+        "C_1": {
+          "mean": 0.061081388101893654,
+          "std": 0.022487333500186866
+        },
+        "C_2": {
+          "mean": 0.021628446664876576,
+          "std": 0.017025089024448513
+        },
+        "C_3": {
+          "mean": 0.0038140610403600617,
+          "std": 0.004384616745888881
+        },
+        "C_4": {
+          "mean": 0.014127248774844049,
+          "std": 0.012172885196928386
+        },
+        "C_5": {
+          "mean": 0.0020086037848138115,
+          "std": 0.011977967664330963
+        }
+      },
       "selected_cluster_names": [
+        "C_2",
         "C_1",
-        "C_0",
-        "C_4"
+        "C_0"
       ],
       "purged_feature_clusters": {
-        "C_1": [
-          "prior_cumulative_5D_F2_Volume_change",
-          "prior_5D_F2_OI_change"
+        "C_2": [
+          "prior_report_ManagedMoney_NetPosition_change"
         ],
-        "C_0": [
-          "prior_cumulative_5D_F1_Volume_change",
+        "C_1": [
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
           "prior_5D_F1_OI_change",
           "prior_5D_AGG_OI_change"
         ],
-        "C_4": [
-          "F1_RolledPrice_change",
-          "F2_RolledPrice_change"
+        "C_0": [
+          "F1_RolledPrice_change"
         ]
       },
+      "feature_sfi": {
+        "C_2": {
+          "prior_report_ManagedMoney_NetPosition_change": {
+            "mean": 0.11999172891452063,
+            "std": 0.04974213817898723
+          },
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change": {
+            "mean": 0.08367660244740384,
+            "std": 0.038870688978138966
+          },
+          "prior_report_ManagedMoney_LongPosition_change": {
+            "mean": 0.0797540261458547,
+            "std": 0.04015037190061571
+          },
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change": {
+            "mean": 0.0626325034614349,
+            "std": 0.01943249458455928
+          }
+        },
+        "C_1": {
+          "prior_cumulative_5D_F1MinusF2_Volume_change": {
+            "mean": 0.12033623278269483,
+            "std": 0.04444469657054597
+          },
+          "prior_5D_F1_OI_change": {
+            "mean": 0.11680991656816242,
+            "std": 0.04859812049393062
+          },
+          "prior_5D_AGG_OI_change": {
+            "mean": 0.08971739496070123,
+            "std": 0.03331395089858745
+          },
+          "prior_cumulative_5D_F1_Volume_change": {
+            "mean": 0.08068220212459119,
+            "std": 0.017561510975210134
+          },
+          "prior_5D_F1MinusF2_openinterest_change": {
+            "mean": -0.010150164498914298,
+            "std": 0.025132537351434156
+          }
+        },
+        "C_0": {
+          "F1_RolledPrice_change": {
+            "mean": 0.3424230208360394,
+            "std": 0.04279783399825945
+          },
+          "F2_RolledPrice_change": {
+            "mean": 0.33635428061116557,
+            "std": 0.034966580929346805
+          },
+          "F3_RolledPrice_change": {
+            "mean": 0.28867701355215625,
+            "std": 0.03951308559442567
+          }
+        }
+      },
       "selected_features": [
-        "prior_cumulative_5D_F2_Volume_change",
-        "prior_5D_F2_OI_change",
-        "prior_cumulative_5D_F1_Volume_change",
+        "prior_report_ManagedMoney_NetPosition_change",
+        "prior_cumulative_5D_F1MinusF2_Volume_change",
         "prior_5D_F1_OI_change",
         "prior_5D_AGG_OI_change",
-        "F1_RolledPrice_change",
-        "F2_RolledPrice_change"
+        "F1_RolledPrice_change"
       ]
     },
     "ManagedMoney_NetPosition_to_openinterest_change": {
       "number_of_feature_clusters": 6,
       "feature_clusters": {
         "C_0": [
-          "F1_RolledPrice_rolling_20D_volatility",
-          "F2_RolledPrice_rolling_20D_volatility",
-          "F3_RolledPrice_rolling_20D_volatility"
+          "F1_RolledPrice_change",
+          "F2_RolledPrice_change",
+          "F3_RolledPrice_change"
         ],
         "C_1": [
           "prior_report_SyntheticF1MinusF2_RolledPrice_change",
@@ -241,8 +473,9 @@
           "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
         ],
         "C_3": [
-          "prior_report_ManagedMoney_ShortPosition_change",
-          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change"
+          "F1_RolledPrice_rolling_20D_volatility",
+          "F2_RolledPrice_rolling_20D_volatility",
+          "F3_RolledPrice_rolling_20D_volatility"
         ],
         "C_4": [
           "prior_cumulative_5D_F1_Volume_change",
@@ -252,55 +485,132 @@
           "prior_5D_F1MinusF2_openinterest_change"
         ],
         "C_5": [
-          "F1_RolledPrice_change",
-          "F2_RolledPrice_change",
-          "F3_RolledPrice_change"
+          "prior_report_ManagedMoney_ShortPosition_change",
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change"
         ]
+      },
+      "cluster_mda": {
+        "C_0": {
+          "mean": 0.38755291760165317,
+          "std": 0.0896580346858773
+        },
+        "C_1": {
+          "mean": 0.011130257879209937,
+          "std": 0.0041825643908224176
+        },
+        "C_2": {
+          "mean": 0.005304763836580162,
+          "std": 0.009521486728568732
+        },
+        "C_3": {
+          "mean": -0.00014387742189549967,
+          "std": 0.002037421591985753
+        },
+        "C_4": {
+          "mean": 0.19578374801873394,
+          "std": 0.02169113504556677
+        },
+        "C_5": {
+          "mean": -0.00035194641298947894,
+          "std": 0.0014023156529437894
+        }
       },
       "selected_cluster_names": [
         "C_1",
         "C_4",
-        "C_5"
+        "C_0"
       ],
       "purged_feature_clusters": {
         "C_1": [
           "prior_cumulative_5D_F2_Volume_change",
-          "prior_5D_F2_OI_change"
+          "prior_5D_F2_OI_change",
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change"
         ],
         "C_4": [
+          "prior_5D_AGG_OI_change",
           "prior_cumulative_5D_F1MinusF2_Volume_change",
-          "prior_5D_F1_OI_change",
-          "prior_5D_AGG_OI_change"
+          "prior_5D_F1_OI_change"
         ],
-        "C_5": [
-          "F1_RolledPrice_change",
-          "F3_RolledPrice_change"
+        "C_0": [
+          "F1_RolledPrice_change"
         ]
+      },
+      "feature_sfi": {
+        "C_1": {
+          "prior_cumulative_5D_F2_Volume_change": {
+            "mean": 0.17486641798249053,
+            "std": 0.04890979877902563
+          },
+          "prior_5D_F2_OI_change": {
+            "mean": 0.02491349541155235,
+            "std": 0.007779793566767374
+          },
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change": {
+            "mean": -0.01840515104241503,
+            "std": 0.023095233444119737
+          }
+        },
+        "C_4": {
+          "prior_5D_AGG_OI_change": {
+            "mean": 0.2648949720633408,
+            "std": 0.06955408700399042
+          },
+          "prior_cumulative_5D_F1MinusF2_Volume_change": {
+            "mean": 0.2630341785438605,
+            "std": 0.040878867910516654
+          },
+          "prior_5D_F1_OI_change": {
+            "mean": 0.23453907863366424,
+            "std": 0.03446080102959717
+          },
+          "prior_cumulative_5D_F1_Volume_change": {
+            "mean": 0.2270918997061165,
+            "std": 0.03149103311615244
+          },
+          "prior_5D_F1MinusF2_openinterest_change": {
+            "mean": 0.1496690129575225,
+            "std": 0.02894511135589527
+          }
+        },
+        "C_0": {
+          "F1_RolledPrice_change": {
+            "mean": 0.461321508996879,
+            "std": 0.07918735340429148
+          },
+          "F3_RolledPrice_change": {
+            "mean": 0.45212682105738755,
+            "std": 0.06616172512809294
+          },
+          "F2_RolledPrice_change": {
+            "mean": 0.45035288869691437,
+            "std": 0.07365088165056881
+          }
+        }
       },
       "selected_features": [
         "prior_cumulative_5D_F2_Volume_change",
         "prior_5D_F2_OI_change",
+        "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+        "prior_5D_AGG_OI_change",
         "prior_cumulative_5D_F1MinusF2_Volume_change",
         "prior_5D_F1_OI_change",
-        "prior_5D_AGG_OI_change",
-        "F1_RolledPrice_change",
-        "F3_RolledPrice_change"
+        "F1_RolledPrice_change"
       ]
     },
     "ManagedMoney_LongPosition_to_openinterest_change": {
       "number_of_feature_clusters": 6,
       "feature_clusters": {
         "C_0": [
-          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
-          "prior_cumulative_5D_F2_Volume_change",
-          "prior_5D_F2_OI_change"
-        ],
-        "C_1": [
           "prior_cumulative_5D_F1_Volume_change",
           "prior_cumulative_5D_F1MinusF2_Volume_change",
           "prior_5D_F1_OI_change",
           "prior_5D_AGG_OI_change",
           "prior_5D_F1MinusF2_openinterest_change"
+        ],
+        "C_1": [
+          "F1_RolledPrice_rolling_20D_volatility",
+          "F2_RolledPrice_rolling_20D_volatility",
+          "F3_RolledPrice_rolling_20D_volatility"
         ],
         "C_2": [
           "prior_report_ManagedMoney_NetPosition_change",
@@ -318,59 +628,129 @@
           "prior_report_ManagedMoney_ShortPosition_to_openinterest_change"
         ],
         "C_5": [
-          "F1_RolledPrice_rolling_20D_volatility",
-          "F2_RolledPrice_rolling_20D_volatility",
-          "F3_RolledPrice_rolling_20D_volatility"
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change"
         ]
+      },
+      "cluster_mda": {
+        "C_0": {
+          "mean": 0.35483459242667215,
+          "std": 0.026188616902519026
+        },
+        "C_1": {
+          "mean": -0.0026800799594678846,
+          "std": 0.002001986154002952
+        },
+        "C_2": {
+          "mean": -0.007373432906274735,
+          "std": 0.00395504323779204
+        },
+        "C_3": {
+          "mean": 0.11992505470664563,
+          "std": 0.041758292290855877
+        },
+        "C_4": {
+          "mean": 0.015905433523505784,
+          "std": 0.0067758271110882565
+        },
+        "C_5": {
+          "mean": 0.0030027825702422795,
+          "std": 0.005746454874997978
+        }
       },
       "selected_cluster_names": [
         "C_4",
         "C_3",
-        "C_1"
+        "C_0"
       ],
       "purged_feature_clusters": {
         "C_4": [
           "prior_report_ManagedMoney_ShortPosition_to_openinterest_change"
         ],
         "C_3": [
-          "F1_RolledPrice_change",
           "F3_RolledPrice_change"
         ],
-        "C_1": [
-          "prior_5D_F1_OI_change",
+        "C_0": [
           "prior_5D_AGG_OI_change",
-          "prior_5D_F1MinusF2_openinterest_change"
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_F1_OI_change"
         ]
+      },
+      "feature_sfi": {
+        "C_4": {
+          "prior_report_ManagedMoney_ShortPosition_to_openinterest_change": {
+            "mean": 0.06812840274399622,
+            "std": 0.02873511754382198
+          },
+          "prior_report_ManagedMoney_ShortPosition_change": {
+            "mean": -0.03688460742797841,
+            "std": 0.014774879247308269
+          }
+        },
+        "C_3": {
+          "F3_RolledPrice_change": {
+            "mean": 0.2331756212586309,
+            "std": 0.0682885760480033
+          },
+          "F1_RolledPrice_change": {
+            "mean": 0.2246652855464349,
+            "std": 0.08103014196757174
+          },
+          "F2_RolledPrice_change": {
+            "mean": 0.21656503483678807,
+            "std": 0.08379511969452728
+          }
+        },
+        "C_0": {
+          "prior_5D_AGG_OI_change": {
+            "mean": 0.4445003654663354,
+            "std": 0.04074339088550143
+          },
+          "prior_cumulative_5D_F1MinusF2_Volume_change": {
+            "mean": 0.3285056818826438,
+            "std": 0.019732078667843576
+          },
+          "prior_cumulative_5D_F1_Volume_change": {
+            "mean": 0.2987067618791468,
+            "std": 0.016756151609751545
+          },
+          "prior_5D_F1_OI_change": {
+            "mean": 0.24075407100513688,
+            "std": 0.026487705093157267
+          },
+          "prior_5D_F1MinusF2_openinterest_change": {
+            "mean": 0.22572773556376421,
+            "std": 0.022077579586789416
+          }
+        }
       },
       "selected_features": [
         "prior_report_ManagedMoney_ShortPosition_to_openinterest_change",
-        "F1_RolledPrice_change",
         "F3_RolledPrice_change",
-        "prior_5D_F1_OI_change",
         "prior_5D_AGG_OI_change",
-        "prior_5D_F1MinusF2_openinterest_change"
+        "prior_cumulative_5D_F1MinusF2_Volume_change",
+        "prior_5D_F1_OI_change"
       ]
     },
     "ManagedMoney_ShortPosition_to_openinterest_change": {
       "number_of_feature_clusters": 6,
       "feature_clusters": {
         "C_0": [
-          "F1_RolledPrice_change",
-          "F2_RolledPrice_change",
-          "F3_RolledPrice_change"
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
+          "prior_cumulative_5D_F2_Volume_change",
+          "prior_5D_F2_OI_change"
         ],
         "C_1": [
-          "prior_cumulative_5D_F1_Volume_change",
-          "prior_cumulative_5D_F1MinusF2_Volume_change",
-          "prior_5D_F1_OI_change",
-          "prior_5D_AGG_OI_change",
-          "prior_5D_F1MinusF2_openinterest_change"
-        ],
-        "C_2": [
           "prior_report_ManagedMoney_NetPosition_change",
           "prior_report_ManagedMoney_LongPosition_change",
           "prior_report_ManagedMoney_NetPosition_to_openinterest_change",
           "prior_report_ManagedMoney_LongPosition_to_openinterest_change"
+        ],
+        "C_2": [
+          "F1_RolledPrice_change",
+          "F2_RolledPrice_change",
+          "F3_RolledPrice_change"
         ],
         "C_3": [
           "F1_RolledPrice_rolling_20D_volatility",
@@ -382,37 +762,111 @@
           "prior_report_ManagedMoney_ShortPosition_to_openinterest_change"
         ],
         "C_5": [
+          "prior_cumulative_5D_F1_Volume_change",
+          "prior_cumulative_5D_F1MinusF2_Volume_change",
+          "prior_5D_F1_OI_change",
+          "prior_5D_AGG_OI_change",
+          "prior_5D_F1MinusF2_openinterest_change"
+        ]
+      },
+      "cluster_mda": {
+        "C_0": {
+          "mean": 0.015943793038772747,
+          "std": 0.007611638924652723
+        },
+        "C_1": {
+          "mean": 0.0362584614088393,
+          "std": 0.02342116160497192
+        },
+        "C_2": {
+          "mean": 0.3288092530076502,
+          "std": 0.012690634011612273
+        },
+        "C_3": {
+          "mean": -0.0011268048302178868,
+          "std": 0.003582040553156918
+        },
+        "C_4": {
+          "mean": -0.002675340867900966,
+          "std": 0.014324298578779987
+        },
+        "C_5": {
+          "mean": -0.02817468044583139,
+          "std": 0.015044109573855184
+        }
+      },
+      "selected_cluster_names": [
+        "C_0",
+        "C_1",
+        "C_2"
+      ],
+      "purged_feature_clusters": {
+        "C_0": [
           "prior_report_SyntheticF1MinusF2_RolledPrice_change",
           "prior_cumulative_5D_F2_Volume_change",
           "prior_5D_F2_OI_change"
-        ]
-      },
-      "selected_cluster_names": [
-        "C_5",
-        "C_2",
-        "C_0"
-      ],
-      "purged_feature_clusters": {
-        "C_5": [
-          "prior_report_SyntheticF1MinusF2_RolledPrice_change",
-          "prior_cumulative_5D_F2_Volume_change"
+        ],
+        "C_1": [
+          "prior_report_ManagedMoney_NetPosition_change"
         ],
         "C_2": [
-          "prior_report_ManagedMoney_NetPosition_change",
-          "prior_report_ManagedMoney_LongPosition_change"
-        ],
-        "C_0": [
-          "F1_RolledPrice_change",
-          "F2_RolledPrice_change"
+          "F1_RolledPrice_change"
         ]
+      },
+      "feature_sfi": {
+        "C_0": {
+          "prior_report_SyntheticF1MinusF2_RolledPrice_change": {
+            "mean": -0.018267943018693257,
+            "std": 0.03944304285227114
+          },
+          "prior_cumulative_5D_F2_Volume_change": {
+            "mean": -0.019297005493442272,
+            "std": 0.03518293084225548
+          },
+          "prior_5D_F2_OI_change": {
+            "mean": -0.04526340675890392,
+            "std": 0.03437270983831958
+          }
+        },
+        "C_1": {
+          "prior_report_ManagedMoney_NetPosition_change": {
+            "mean": 0.1363004995458133,
+            "std": 0.05132544381564133
+          },
+          "prior_report_ManagedMoney_LongPosition_change": {
+            "mean": 0.11270339881240865,
+            "std": 0.04618686486195241
+          },
+          "prior_report_ManagedMoney_LongPosition_to_openinterest_change": {
+            "mean": 0.11033356119870139,
+            "std": 0.02151817583950447
+          },
+          "prior_report_ManagedMoney_NetPosition_to_openinterest_change": {
+            "mean": 0.09316271222738388,
+            "std": 0.036646531819158064
+          }
+        },
+        "C_2": {
+          "F1_RolledPrice_change": {
+            "mean": 0.3768723970266545,
+            "std": 0.04554464135405112
+          },
+          "F2_RolledPrice_change": {
+            "mean": 0.3623186266188216,
+            "std": 0.03712212453428114
+          },
+          "F3_RolledPrice_change": {
+            "mean": 0.3357759663767347,
+            "std": 0.04418639272150493
+          }
+        }
       },
       "selected_features": [
         "prior_report_SyntheticF1MinusF2_RolledPrice_change",
         "prior_cumulative_5D_F2_Volume_change",
+        "prior_5D_F2_OI_change",
         "prior_report_ManagedMoney_NetPosition_change",
-        "prior_report_ManagedMoney_LongPosition_change",
-        "F1_RolledPrice_change",
-        "F2_RolledPrice_change"
+        "F1_RolledPrice_change"
       ]
     }
   }

@@ -42,6 +42,8 @@ class MasterSelector():
         self.feature_clusters: dict = None
         self.selected_feature_cluster_names : list = None
         self.selected_feature_names: list = None
+        self.clustered_mda: pd.DataFrame = None
+        self.feature_sfi: dict = None  # {cluster_name: pd.DataFrame with mean/std per feature}
 
 
     def fit(self, dataset: pd.DataFrame):
@@ -107,12 +109,15 @@ class MasterSelector():
             plt.show()
             plt.close()
         
+        self.clustered_mda = clustered_mda.set_index('Cluster')
+
         self.selected_feature_cluster_names =  clustered_mda[clustered_mda['Clustered MDA'] > np.maximum(clustered_mda['Clustered MDA'].median(),0)][
             'Cluster'].unique().tolist()
         if self.verbose:
             print(f'Selected cluster names: {self.selected_feature_cluster_names}')
     
         purged_feature_clusters = {}
+        self.feature_sfi = {}
         for cluster_name in self.selected_feature_cluster_names:
             cluster_features = self.feature_clusters[cluster_name]
             if len(cluster_features) > 1:
@@ -124,6 +129,7 @@ class MasterSelector():
                                 is_classification=self.is_classification)
                     mrmr.fit(X=dataset[cluster_features], y=dataset[self.response_name])
                     purged_feature_clusters[cluster_name] = mrmr.selected_features
+                    self.feature_sfi[cluster_name] = mrmr.sfi.importances
                 elif self.redundancy_method == 'sfs':
                     sfs = SequentialFeatureSelector(estimator=self.redudancy_model,
                                                     cv=self.cv,

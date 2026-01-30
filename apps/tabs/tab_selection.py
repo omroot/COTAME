@@ -1,12 +1,16 @@
 import dash_bootstrap_components as dbc
 from dash import Input, Output, callback, dash_table, dcc, html
-import json
+from dash.dash_table.Format import Format, Scheme
+
+
+def _fmt(val, decimals=4):
+    """Format a float or return '—'."""
+    if val is None:
+        return "—"
+    return f"{val:.{decimals}f}"
 
 
 def make_layout(app_data):
-    # Get response options from nowcast
-    nc_responses = list(app_data.nowcast_selection_details["responses"].keys())
-
     layout = dbc.Container([
         html.H4("Feature Selection Details"),
         html.Hr(),
@@ -30,9 +34,9 @@ def make_layout(app_data):
         ]),
         html.Br(),
         dbc.Card(dbc.CardBody(id="selection-summary"), className="mb-3"),
-        html.H5("Feature Clusters"),
+        html.H5("Feature Clusters (with Clustered MDA)"),
         html.Div(id="selection-clusters"),
-        html.H5("Selected Features (after purging)", className="mt-3"),
+        html.H5("Selected Features — SFI Scores (after purging)", className="mt-3"),
         html.Div(id="selection-final"),
     ], fluid=True, className="mt-3")
     return layout
@@ -66,46 +70,105 @@ def register_callbacks(app, app_data):
 
         n_clusters = resp_data.get("number_of_feature_clusters", 0)
         selected_clusters = resp_data.get("selected_cluster_names", [])
-        summary = html.P(f"{n_clusters} feature clusters found, {len(selected_clusters)} selected: {', '.join(selected_clusters)}")
+        cluster_mda = resp_data.get("cluster_mda", {})
+        feature_sfi = resp_data.get("feature_sfi", {})
 
-        # Clusters table
+        summary = html.P(
+            f"{n_clusters} feature clusters found, {len(selected_clusters)} selected: "
+            f"{', '.join(selected_clusters)}"
+        )
+
+        # --- Clusters table with MDA (sortable) ---
         clusters = resp_data.get("feature_clusters", {})
-        cluster_rows = []
+        table_data = []
         for cname, members in clusters.items():
             is_selected = cname in selected_clusters
-            style = {"backgroundColor": "#d4edda"} if is_selected else {}
-            cluster_rows.append(
-                html.Tr([
-                    html.Td(cname),
-                    html.Td(", ".join(members)),
-                    html.Td("Yes" if is_selected else "No"),
-                ], style=style)
-            )
+            mda_info = cluster_mda.get(cname, {})
+            mda_mean = mda_info.get("mean")
+            mda_std = mda_info.get("std")
+            table_data.append({
+                "Cluster": cname,
+                "Features": "\n".join(members),
+                "MDA Mean": mda_mean,
+                "MDA SE": mda_std,
+                "Selected": "Yes" if is_selected else "No",
+            })
 
-        cluster_table = dbc.Table([
-            html.Thead(html.Tr([html.Th("Cluster"), html.Th("Features"), html.Th("Selected")])),
-            html.Tbody(cluster_rows),
-        ], bordered=True, striped=True, size="sm")
+        cluster_table = dash_table.DataTable(
+            columns=[
+                {"name": "Cluster", "id": "Cluster"},
+                {"name": "Features", "id": "Features", "presentation": "markdown"},
+                {"name": "MDA Mean", "id": "MDA Mean", "type": "numeric",
+                 "format": Format(precision=6, scheme=Scheme.fixed)},
+                {"name": "MDA SE", "id": "MDA SE", "type": "numeric",
+                 "format": Format(precision=6, scheme=Scheme.fixed)},
+                {"name": "Selected", "id": "Selected"},
+            ],
+            data=table_data,
+            sort_action="native",
+            style_cell={
+                "textAlign": "left",
+                "padding": "8px",
+                "fontSize": "13px",
+                "whiteSpace": "pre-line",
+            },
+            style_header={"fontWeight": "bold"},
+            style_data_conditional=[
+                {
+                    "if": {"filter_query": '{Selected} = "Yes"'},
+                    "backgroundColor": "#d4edda",
+                },
+                {
+                    "if": {"filter_query": '{Selected} = "No"'},
+                    "backgroundColor": "#f8d7da",
+                },
+            ],
+            page_size=20,
+        )
 
-        # Final selected features
+        # --- Purged / Kept features with SFI scores ---
         purged = resp_data.get("purged_feature_clusters", {})
-        final_features = resp_data.get("selected_features", [])
 
         purge_rows = []
         for cname in selected_clusters:
             purged_feats = purged.get(cname, [])
-            kept = [f for f in clusters.get(cname, []) if f not in purged_feats]
+            all_members = clusters.get(cname, [])
+            kept = [f for f in all_members if f not in purged_feats]
+            sfi_data = feature_sfi.get(cname, {})
+
+            def _feat_with_sfi(feat_name):
+                sfi_info = sfi_data.get(feat_name)
+                if sfi_info:
+                    return f"{feat_name}  (SFI: {_fmt(sfi_info['mean'])} ± {_fmt(sfi_info['std'])})"
+                return feat_name
+
+            purged_items = [html.Li(_feat_with_sfi(pf)) for pf in purged_feats]
+            kept_items = [html.Li(_feat_with_sfi(kf)) for kf in kept]
+
+            purged_cell = (
+                html.Ul(purged_items, style={"marginBottom": "0", "paddingLeft": "18px"})
+                if purged_items else "—"
+            )
+            kept_cell = (
+                html.Ul(kept_items, style={"marginBottom": "0", "paddingLeft": "18px"})
+                if kept_items else "—"
+            )
+
             purge_rows.append(
                 html.Tr([
-                    html.Td(cname),
-                    html.Td(", ".join(purged_feats) if purged_feats else "—"),
-                    html.Td(", ".join(kept)),
+                    html.Td(cname, style={"verticalAlign": "top"}),
+                    html.Td(purged_cell),
+                    html.Td(kept_cell),
                 ])
             )
 
         final_table = dbc.Table([
-            html.Thead(html.Tr([html.Th("Cluster"), html.Th("Purged Features"), html.Th("Kept Features")])),
+            html.Thead(html.Tr([
+                html.Th("Cluster"),
+                html.Th("Retained Features (with SFI)"),
+                html.Th("Purged Features (with SFI)"),
+            ])),
             html.Tbody(purge_rows),
-        ], bordered=True, striped=True, size="sm")
+        ], bordered=True, size="sm")
 
         return summary, cluster_table, final_table
