@@ -54,4 +54,4 @@ tab_shap.register_callbacks(app, app_data)
 tab_inference.register_callbacks(app, app_data, engine)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=8050, debug=True)
