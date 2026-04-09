@@ -1,0 +1,68 @@
+{
+  "CL": {
+    "name": "WTI Crude Oil",
+    "contracts": [
+      {"code": "067651", "source": "cftc", "description": "WTI-PHYSICAL (NYMEX benchmark)"},
+      {"code": "067411", "source": "cftc", "description": "CRUDE OIL, LIGHT SWEET (ICE-listed WTI)"},
+      {"code": "06765I", "source": "cftc", "description": "WTI CRUDE OIL FINANCIAL (cash-settled)"},
+      {"code": "067A55", "source": "cftc", "description": "Micro WTI CRUDE OIL FINANCIAL", "multiplier": 0.1},
+      {"code": "067655", "source": "cftc", "description": "E-MINI CRUDE OIL, LIGHT SWEET", "multiplier": 0.5},
+      {"code": "06765C", "source": "cftc", "description": "CRUDE OIL AVG PRICE OPTIONS"},
+      {"code": "06765B", "source": "cftc", "description": "EUR STYLE CRUDE OIL OPTIONS"},
+      {"code": "06741Q", "source": "cftc", "description": "WTI CRUDE OIL 1ST LINE (ICE Energy Div)"},
+      {"code": "06765A", "source": "cftc", "description": "WTI CRUDE OIL CALENDAR SWAP"},
+      {"code": "06765G", "source": "cftc", "description": "DUBAI CRUDE OIL CALENDAR SWAP"}
+    ]
+  },
+  "CO": {
+    "name": "Brent Crude Oil",
+    "contracts": [
+      {"code": null, "source": "ice", "description": "ICE Brent Crude Futures and Options - ICE Futures Europe",
+       "market_name_combined": "ICE Brent Crude Futures and Options - ICE Futures Europe",
+       "market_name_futures": "ICE Brent Crude Futures - ICE Futures Europe"},
+      {"code": "06765J", "source": "cftc", "description": "BRENT FINANCIAL (cash-settled)"},
+      {"code": "06765N", "source": "cftc", "description": "BRENT (ICE) CALENDAR SWAP"},
+      {"code": "06765T", "source": "cftc", "description": "BRENT CRUDE OIL LAST DAY (physical)"},
+      {"code": "06765Y", "source": "cftc", "description": "BRENT AVG PRICE OPTIONS"},
+      {"code": "06765X", "source": "cftc", "description": "EUR STYLE BRENT OPTIONS"}
+    ]
+  },
+  "HO": {
+    "name": "Heating Oil / ULSD",
+    "contracts": [
+      {"code": "022651", "source": "cftc", "description": "NY HARBOR ULSD (NYMEX benchmark)"},
+      {"code": "022653", "source": "cftc", "description": "HEATING OIL AVG PRICE OPTIONS"},
+      {"code": "022654", "source": "cftc", "description": "EUR STYLE HEATING OIL OPTIONS"},
+      {"code": "022A05", "source": "cftc", "description": "GULF COAST ULSD SWAP (USGC flat price)"},
+      {"code": "02265V", "source": "cftc", "description": "GASOIL (ICE) SWAP (cash-settled)", "multiplier": 0.746},
+      {"code": "022A24", "source": "cftc", "description": "GASOIL (ICE) MINI CAL SWAP", "multiplier": 0.746},
+      {"code": "022A46", "source": "cftc", "description": "GASOIL AVG PRICE OPTIONS", "multiplier": 0.746},
+      {"code": "02265J", "source": "cftc", "description": "SING GASOIL SWAP"},
+      {"code": "022A22", "source": "cftc", "description": "SING GASOIL BALMO SWAP"}
+    ]
+  },
+  "XB": {
+    "name": "Gasoline (RBOB)",
+    "contracts": [
+      {"code": "111659", "source": "cftc", "description": "GASOLINE BLENDSTOCK (RBOB) (NYMEX benchmark)"},
+      {"code": "11165J", "source": "cftc", "description": "RBOB GASOLINE FINANCIAL"},
+      {"code": "111416", "source": "cftc", "description": "RBOB GASOLINE 1ST LINE (ICE Energy Div)"},
+      {"code": "11165K", "source": "cftc", "description": "RBOB CALENDAR SWAP"},
+      {"code": "111A11", "source": "cftc", "description": "SINGAPORE MOGAS 92 SWAP FUTURE"},
+      {"code": "111A47", "source": "cftc", "description": "MINI EUROBOB GAS OXY NWE", "multiplier": 0.833}
+    ]
+  },
+  "QS": {
+    "name": "Gasoil",
+    "contracts": [
+      {"code": null, "source": "ice", "description": "ICE Gasoil Futures and Options - ICE Futures Europe",
+       "market_name_combined": "ICE Gasoil Futures and Options - ICE Futures Europe",
+       "market_name_futures": "ICE Gasoil Futures - ICE Futures Europe"},
+      {"code": "02265V", "source": "cftc", "description": "GASOIL (ICE) SWAP (cash-settled)"},
+      {"code": "022A46", "source": "cftc", "description": "GASOIL AVG PRICE OPTIONS"},
+      {"code": "022A24", "source": "cftc", "description": "GASOIL (ICE) MINI CAL SWAP"},
+      {"code": "02265J", "source": "cftc", "description": "SING GASOIL SWAP", "multiplier": 1.34},
+      {"code": "022A22", "source": "cftc", "description": "SING GASOIL BALMO SWAP", "multiplier": 1.34}
+    ]
+  }
+}
